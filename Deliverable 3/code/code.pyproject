@@ -1,0 +1,14 @@
+{
+    "files": [
+        "main.py",
+        "ui/find_route_screen.ui",
+        "ui/main_menu_screen.ui",
+        "ui/route_result_screen.ui",
+        "ui/select_route_screen.ui",
+        "ui_classes.py",
+        "ui_py/find_route_ui.py",
+        "ui_py/main_menu_ui.py",
+        "ui_py/route_result_ui.py",
+        "ui_py/select_route_ui.py"
+    ]
+}
