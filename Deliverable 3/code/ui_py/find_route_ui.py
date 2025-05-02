@@ -43,11 +43,14 @@ class Ui_Form(object):
         font.setFamily("FreeSans")
         font.setPointSize(13)
         self.comboBox.setFont(font)
-        self.comboBox.setStyleSheet("color: black;  \n"
-"background-color: #00000000;\n"
+        self.comboBox.setStyleSheet("color: f4f4f4;  \n"
+"background-color: #f4f4f4;\n"
 "border-radius: 6px;\n"
 "    padding: 5px;")
+        self.comboBox.setEditable(False)
         self.comboBox.setObjectName("comboBox")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
         self.lineEdit_2 = QtWidgets.QLineEdit(parent=Form)
         self.lineEdit_2.setGeometry(QtCore.QRect(26, 600, 370, 59))
         font = QtGui.QFont()
@@ -95,6 +98,17 @@ class Ui_Form(object):
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setWordWrap(True)
         self.label.setObjectName("label")
+        self.pushButton_6 = QtWidgets.QPushButton(parent=Form)
+        self.pushButton_6.setGeometry(QtCore.QRect(20, 40, 41, 31))
+        font = QtGui.QFont()
+        font.setFamily("FreeSans")
+        font.setPointSize(13)
+        font.setBold(False)
+        self.pushButton_6.setFont(font)
+        self.pushButton_6.setStyleSheet("color: f4f4f4;background-color: #f4f4f4;\n"
+"border: 0;\n"
+"")
+        self.pushButton_6.setObjectName("pushButton_6")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -104,6 +118,9 @@ class Ui_Form(object):
         Form.setWindowTitle(_translate("Form", "Form"))
         self.lineEdit.setPlaceholderText(_translate("Form", "Calories to burn:"))
         self.comboBox.setPlaceholderText(_translate("Form", "Running"))
+        self.comboBox.setItemText(0, _translate("Form", "Running"))
+        self.comboBox.setItemText(1, _translate("Form", "Walking"))
         self.lineEdit_2.setPlaceholderText(_translate("Form", "Starting location:"))
         self.pushButton_5.setText(_translate("Form", "Find Route"))
         self.label.setText(_translate("Form", "FIND ROUTE"))
+        self.pushButton_6.setText(_translate("Form", "←"))

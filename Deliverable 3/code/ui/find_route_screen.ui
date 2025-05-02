@@ -82,14 +82,27 @@ QLineEdit::placeholder {
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color: black;  
-background-color: #00000000;
+    <string notr="true">color: f4f4f4;  
+background-color: #f4f4f4;
 border-radius: 6px;
     padding: 5px;</string>
+   </property>
+   <property name="editable">
+    <bool>false</bool>
    </property>
    <property name="placeholderText">
     <string>Running</string>
    </property>
+   <item>
+    <property name="text">
+     <string>Running</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Walking</string>
+    </property>
+   </item>
   </widget>
   <widget class="QLineEdit" name="lineEdit_2">
    <property name="geometry">
@@ -189,6 +202,31 @@ border-radius: 6px;
    </property>
    <property name="wordWrap">
     <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_6">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>40</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>FreeSans</family>
+     <pointsize>13</pointsize>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: f4f4f4;background-color: #f4f4f4;
+border: 0;
+</string>
+   </property>
+   <property name="text">
+    <string>←</string>
    </property>
   </widget>
  </widget>
