@@ -1,5 +1,8 @@
 from PyQt6.QtWidgets import QWidget
-from ui_py import (select_activity_ui, activity_monitor_ui, activity_summary_ui)
+from ui_py import (select_activity_ui, activity_monitor_ui, activity_summary_ui,
+                    scan_qr_ui, confirm_food_ui, food_info_ui,
+                    daily_challenge_ui,
+                    find_route_ui, select_route_ui, route_result_ui)
 import main_menu
   
 
@@ -28,9 +31,9 @@ class ActivityMonitorScreen(QWidget):
         self.ui = activity_monitor_ui.Ui_Form()
         self.service = service
         self.ui.setupUi(self)
-        self.ui.pushButton_9.clicked.connect(self.show_activity_summary_screen)
+        self.ui.pushButton_9.clicked.connect(self.service_end_activity)
         
-    def show_activity_summary_screen(self):
+    def service_end_activity(self):
         self.deleteLater()
         self.service.end_activity()
 
@@ -45,10 +48,77 @@ class ActivitySummaryScreen(QWidget):
         self.ui.setupUi(self)
         self.service = service
         self.ui.pushButton_9.clicked.connect(self.show_main_menu_screen)
-        self.show()
 
     def show_main_menu_screen(self):
         self.deleteLater()
         self.main_menu = main_menu.MainMenuScreen()
 
     
+def placeholder():
+    pass
+
+
+class FoodConfirmationScreen(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.ui = confirm_food_ui.Ui_Form()
+        self.ui.setupUi(self)
+        self.ui.pushButton_10.clicked.connect(placeholder) #
+        self.ui.pushButton_9.clicked.connect(placeholder) #
+
+class RecentlyScannedScreen(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.ui = scan_qr_ui.Ui_Form()
+        self.ui.setupUi(self)
+        self.ui.pushButton_11.clicked.connect(placeholder) #
+        self.ui.pushButton_5.clicked.connect(placeholder) #
+
+class FoodInfoScreen(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.ui = food_info_ui.Ui_Form()
+        self.ui.setupUi(self)
+        self.ui.pushButton_9.clicked.connect(placeholder) #
+
+
+class DailyChallengeScreen(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.ui = daily_challenge_ui.Ui_Form()
+        self.ui.setupUi(self)
+        self.ui.pushButton_5.clicked.connect(placeholder) #
+        self.ui.pushButton_6.clicked.connect(placeholder) #
+        self.ui.pushButton_11.clicked.connect(placeholder) #
+
+
+class ChoiceRouteScreen(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.ui = find_route_ui.Ui_Form()
+        self.ui.setupUi(self)
+        self.ui.pushButton_5.clicked.connect(placeholder) #
+        self.ui.pushButton_6.clicked.connect(placeholder) #
+        self.show()
+
+
+class RouteSelectionScreen(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.ui = select_route_ui.Ui_Form()
+        self.ui.setupUi(self)
+        self.ui.pushButton_2.clicked.connect(placeholder) #
+        self.ui.pushButton_3.clicked.connect(placeholder) #
+        self.ui.pushButton.clicked.connect(placeholder) #
+        self.ui.pushButton_8.clicked.connect(placeholder) #
+
+class RouteDisplayScreen(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.ui = route_result_ui.Ui_Form()
+        self.ui.setupUi(self)
+        self.ui.pushButton_8.clicked.connect(placeholder) #
+        self.ui.pushButton_9.clicked.connect(placeholder) #
+    
+
+
