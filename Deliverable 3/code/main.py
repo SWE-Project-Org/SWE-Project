@@ -1,8 +1,7 @@
 # This Python file uses the following encoding: utf-8
 import sys
 from PyQt6.QtWidgets import QApplication
-import ui_classes
-
+import main_menu
 app = QApplication(sys.argv)
-main_menu = ui_classes.MainMenuWindow()
+main_menu = main_menu.MainMenuScreen()
 app.exec()
