@@ -145,4 +145,3 @@ class CouponCodeScreen(QWidget):
         self.ui.setupUi(self)
         self.ui.pushButton_6.clicked.connect(placeholder) #back button
 
-
