@@ -1,0 +1,24 @@
+{
+    "files": [
+        "main.py",
+        "ui/activity_monitor_screen.ui",
+        "ui/activity_summary_screen.ui",
+        "ui/confirm_food_screen.ui",
+        "ui/daily_challenge_screen.ui",
+        "ui/find_route_screen.ui",
+        "ui/food_info_screen.ui",
+        "ui/main_menu_screen.ui",
+        "ui/my_vouchers_screen.ui",
+        "ui/redeem_points_screen.ui",
+        "ui/route_result_screen.ui",
+        "ui/scan_qr_screen.ui",
+        "ui/select_activity_screen.ui",
+        "ui/select_route_screen.ui",
+        "ui/weekly_progress_screen.ui",
+        "ui_classes.py",
+        "ui_py/find_route_ui.py",
+        "ui_py/main_menu_ui.py",
+        "ui_py/route_result_ui.py",
+        "ui_py/select_route_ui.py"
+    ]
+}

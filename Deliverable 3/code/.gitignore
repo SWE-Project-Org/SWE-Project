@@ -1,0 +1,7 @@
+*.user
+.venv
+__pycache__
+ui/__pycache__
+ui_py/__pycache__
+ui/*.py
+other.py
