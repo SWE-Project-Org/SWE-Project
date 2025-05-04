@@ -1,5 +1,5 @@
 from support_classes import Timer, DBManager
-from RewardService import RewardService
+from services.RewardService import RewardService
 from models.Challenge import Challenge
 from screens.Notification import NotificationScreen
 from screens.DailyChallenge import DailyChallengeScreen
@@ -17,15 +17,15 @@ class ChallengeService:
     def start_daily_challenge(self):
         
         try:
-            if self.is_daily_completed():
+            if self.is_daily_completed(self):
                 raise ValueError("Daily challenged has been completed for today")
 
-            challenge = self.create_challenge()
+            challenge = self.create_challenge(self)
             calories = challenge.get_calories()
-            timer = self.create_timer()
+            timer = self.create_timer(self)
             timer.StartTimer()
 
-            dScreen = DailyChallengeScreen()
+            dScreen = DailyChallengeScreen(self)
             dScreen.show()
 
         except Exception as e:
@@ -33,14 +33,13 @@ class ChallengeService:
             nScreen = NotificationScreen(error_message)
             nScreen.show()
 
-
     # when the user clicks "Done" in the DailyChallengeScreen
     def challenge_completed(self) -> None:
         self.reward_service.reward_points_to_user(100)
         self.db.save_challenge(self.current_challenge)
         self.current_challenge = None
 
-        nScreen = NotificationScreen("Congrats for completing the daily challenge 100 points have been awarded!")
+        nScreen = NotificationScreen(self,"Congrats for completing the daily challenge 100 points have been awarded!")
         nScreen.show()
 
     # when the user clicks "Abort" in the DailyChallengeScreen
@@ -48,12 +47,13 @@ class ChallengeService:
         menu = main_menu.MainMenuScreen()
         menu.show()
 
-        nScreen = NotificationScreen("Challenge has been aborted")
+        nScreen = NotificationScreen(self,"Challenge has been aborted")
         nScreen.show()
 
 
     def is_daily_completed(self) -> bool:
-        return self.db.is_daily_challenge_completed()
+        return False
+        # return self.db.is_daily_challenge_completed()
 
     def create_challenge(self) -> Challenge:
         self.current_challenge = Challenge()

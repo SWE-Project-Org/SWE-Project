@@ -1,5 +1,5 @@
 import datetime
-from Offer import Offer
+from models.Offer import Offer
 
 class CouponCode:
     def __init__(self,offer: Offer):
