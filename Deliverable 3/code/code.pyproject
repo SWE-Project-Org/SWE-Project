@@ -8,6 +8,8 @@
         "ui/find_route_screen.ui",
         "ui/food_info_screen.ui",
         "ui/main_menu_screen.ui",
+        "ui/my_vouchers_screen.ui",
+        "ui/redeem_points_screen.ui",
         "ui/route_result_screen.ui",
         "ui/scan_qr_screen.ui",
         "ui/select_activity_screen.ui",
