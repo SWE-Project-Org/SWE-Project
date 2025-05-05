@@ -1,3 +1,4 @@
+import datetime
 from support_classes import Timer, DBManager
 from models.Offer import Offer 
 from models.CouponCode import CouponCode
@@ -19,58 +20,85 @@ class RewardService:
             if len(offers) <= 0:
                 raise ValueError("No offers found")
 
-            rScreen = RedeemPointsScreen()
-            rScreen.show()
+            self.rScreen = RedeemPointsScreen(self)
+            self.rScreen.show()
 
         except Exception as e:
             error_message = f"Failed to retrieve offers: {str(e)}"
-            nScreen = NotificationScreen(error_message)
-            nScreen.show()
+            print(error_message)
+            # self.nScreen = NotificationScreen(self,error_message)
+            # self.nScreen.show()
 
 
     # when the user selects the offer & number of times to redeem the offer from the RedeemPointsScreen
-    def redeem_offer(self,offer: Offer):
+    def redeem_offer(self,offer: Offer,index,times):
             
         try: 
-            rScreen = ConfirmScreen()
-            rScreen.show()
+            # self.rScreen = ConfirmScreen()
+            # self.rScreen.show()
 
             # if he agrees proceed with : 
-            self.check_if_offer_valid(offer)
-            self.compare_redeem_limit(offer)
+            # self.check_if_offer_valid(offer)
+            # self.compare_redeem_limit(offer,times)
 
 
-            user_points = self.db.get_user_points()
+            # user_points = self.db.get_user_points()
 
-            if user_points - offer.points < 0:
-                raise ValueError("Not enough points to redeem")
+            # if user_points - offer.points < 0:
+            #     raise ValueError("Not enough points to redeem")
                 
-            remaining = user_points - offer.points
-            ccode = CouponCode(offer)
-            self.db.save_coupon_code(ccode)
+            # remaining = user_points - offer.points
+            # ccode = CouponCode(offer)
+            # self.db.save_coupon_code(ccode)
 
-            coupon_codes = self.db.get_all_coupon_codes()
+            # coupon_codes = self.db.get_all_coupon_codes()
 
-            cScreen = CouponCodeScreen()
-            cScreen.show()
+            self.cScreen = CouponCodeScreen(self)
+            self.cScreen.show()
 
 
         except Exception as e:
             error_message = f"Failed to redeem offer: {str(e)}"
-            nScreen = NotificationScreen(error_message)
-            nScreen.show()
+            print(error_message)
+            self.nScreen = NotificationScreen(self,error_message)
+            self.nScreen.show()
 
         
 
 
 
-    def fetch_offers_from_API() -> list[Offer]:
+    def fetch_offers_from_API(self) -> list[Offer]:
+        return [
+            Offer(
+            points=100,
+            description="Masoutis",
+            validTill=datetime.datetime.now() + datetime.timedelta(days=30),
+            redeemLimit=5
+            ),
+            Offer(
+            points=200,
+            description="Sklavenitis",
+            validTill=datetime.datetime.now() + datetime.timedelta(days=60),
+            redeemLimit=2
+            ),
+            Offer(
+            points=50,
+            description="MyMarket",
+            validTill=datetime.datetime.now() + datetime.timedelta(days=15),
+            redeemLimit=10
+            ),
+            Offer(
+            points=500,
+            description="Lidl",
+            validTill=datetime.datetime.now() + datetime.timedelta(days=90),
+            redeemLimit=1
+            )
+        ]
+
+    def check_if_offer_valid(self,offer: Offer):
         pass
 
-    def check_if_offer_valid(offer: Offer):
-        pass
-
-    def compare_redeem_limit(offer: Offer):
+    def compare_redeem_limit(self,offer: Offer,times):
         pass
 
 

@@ -3,6 +3,7 @@ import services.RewardService
 from ui_py import (main_menu_ui)
 from service_classes import ActivityMonitorService
 from services.ChallengeService import ChallengeService
+from services.RewardService import RewardService
 import services
 from support_classes import DBManager
 
@@ -12,6 +13,7 @@ class MainMenuScreen(QMainWindow):
         self.ui = main_menu_ui.Ui_MainWindow()  
         self.ui.setupUi(self) 
         self.ui.pushButton_8.clicked.connect(self.monitor_activity_service)
+        self.ui.pushButton_7.clicked.connect(self.reward_service)
         self.ui.pushButton.clicked.connect(self.challenge_service)
         self.show()
     
@@ -25,3 +27,9 @@ class MainMenuScreen(QMainWindow):
         db = DBManager()
         challenge_service = ChallengeService(db,services.RewardService.RewardService(db))
         challenge_service.start_daily_challenge()
+
+    def reward_service(self):
+        self.deleteLater()
+        db = DBManager()
+        reward_service = RewardService(db)
+        reward_service.get_offers()
