@@ -3,6 +3,7 @@ from models.Supermarket import SupermarketAPI
 from models.FoodPlan import FoodPlan
 from screens.CreateFoodPlanScreen import CreateFoodPlanScreen
 from screens.GroceryPlannerScreen import CreateGroceryPlannerScreen
+from services.GroceryPlannerService import GroceryPlannerService
 
 
 class FoodPlannerService:

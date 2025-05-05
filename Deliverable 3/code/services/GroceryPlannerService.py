@@ -1,15 +1,17 @@
 from models.Supermarket import SupermarketAPI
 from models.Ingredients import Ingredients
 from models.DBManager import DBManager
-from FoodPlannerService import FoodPlannerService
+from screens.FoodPlanSummaryScreen import FoodPlanSummaryScreen
 
 
 class GroceryPlannerService:
 
-    def __init__(self, sm: SupermarketAPI,foodplanner:FoodPlannerService,db:DBManager):
-        self.db = db
-        self.sm = sm
-        self.foodplanner = foodplanner
+    def __init__(self):
+      pass
+    
+    def createGroceryService(self):
+        self.create_grocery_planner_screen = FoodPlanSummaryScreen(self)
+        self.create_grocery_planner_screen.show()
 
     def analyzeMeals(self):
         pass

@@ -1,6 +1,7 @@
 from PyQt6.QtWidgets import QWidget
 from ui_py import (create_food_plan_ui)
 import main_menu
+from services.GroceryPlannerService import GroceryPlannerService
 
 
 
