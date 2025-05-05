@@ -1,9 +1,9 @@
 from PyQt6.QtWidgets import QWidget
+from ui_py import my_vouchers_ui
 
-# make this a popup 
 class CouponCodeScreen(QWidget):
-    def __init__(self,service):
+    def __init__(self):
         super().__init__()
-        # self.ui = daily_challenge_ui.Ui_Form() <-- make a couponCode screen ui
-        self.service = service
-        # self.ui.setupUi(self)
+        self.ui = my_vouchers_ui.Ui_Form()
+        self.ui.setupUi(self)
+        # self.ui.pushButton_6.clicked.connect(placeholder) #back button

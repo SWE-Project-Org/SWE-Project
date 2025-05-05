@@ -12,7 +12,7 @@ class MainMenuScreen(QMainWindow):
         self.ui = main_menu_ui.Ui_MainWindow()  
         self.ui.setupUi(self) 
         self.ui.pushButton_8.clicked.connect(self.monitor_activity_service)
-        self.ui.pushButton_7.clicked.connect(self.challenge_service)
+        self.ui.pushButton.clicked.connect(self.challenge_service)
         self.show()
     
     def monitor_activity_service(self):
