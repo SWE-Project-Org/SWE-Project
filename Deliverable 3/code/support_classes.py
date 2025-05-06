@@ -44,3 +44,6 @@ class DBManager:
 
     def get_all_coupon_codes(self):
         pass
+
+    def get_weekly_data(self):
+        return 'weekly data'

@@ -5,6 +5,7 @@ from service_classes import ActivityMonitorService
 from services.ChallengeService import ChallengeService
 from services.RewardService import RewardService
 from services.RegisterMealService import RegisterMealService
+from services.WeeklyProgressService import WeeklyProgressService
 from models.Supermarket import Supermarket
 import services
 from support_classes import DBManager
@@ -18,7 +19,14 @@ class MainMenuScreen(QMainWindow):
         self.ui.pushButton_7.clicked.connect(self.reward_service)
         self.ui.pushButton.clicked.connect(self.challenge_service)
         self.ui.pushButton_3.clicked.connect(self.register_meal_service)
+        self.ui.pushButton_4.clicked.connect(self.weekly_progress_service)
         self.show()
+
+    def weekly_progress_service(self):
+        self.deleteLater()
+        db = DBManager()
+        self.weekly_progress_obj = WeeklyProgressService(db)
+        self.weekly_progress_obj.weekly_progress()
 
     def register_meal_service(self):
         self.deleteLater()
