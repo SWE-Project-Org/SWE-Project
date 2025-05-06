@@ -12,6 +12,7 @@
         "ui/grocery_planner_screen.ui",
         "ui/main_menu_screen.ui",
         "ui/my_vouchers_screen.ui",
+        "ui/notification_screen.ui",
         "ui/redeem_points_screen.ui",
         "ui/route_result_screen.ui",
         "ui/scan_qr_screen.ui",

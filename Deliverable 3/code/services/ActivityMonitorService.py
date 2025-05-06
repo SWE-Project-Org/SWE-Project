@@ -2,7 +2,9 @@ from support_classes import Activity, Timer
 from screens.ActivitySelectionScreen import ActivitySelectionScreen
 from screens.ActivityMonitorScreen import ActivityMonitorScreen
 from screens.ActivitySummaryScreen import ActivitySummaryScreen
+from screens.Notification import NotificationScreen
 from support_classes import DBManager, SmartWatch
+
 
 class ActivityMonitorService():
     def __init__(self, db:DBManager, smartwatch:SmartWatch):
@@ -17,7 +19,9 @@ class ActivityMonitorService():
         self.activities = self.get_activities()
         self.activity_selection_screen = ActivitySelectionScreen(self)
         self.activity_selection_screen.show()
-        
+        self.notification = NotificationScreen("none", self)
+
+
     def create_activity(self):
         self.activity = Activity()
         self.timer = self.create_timer()

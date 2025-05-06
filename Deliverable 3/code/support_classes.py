@@ -35,7 +35,6 @@ class DBManager:
     def get_user_points(self) -> int:
         pass
 
-    # returns balance
     def subtract_user_points(self) -> int:
         pass
 
