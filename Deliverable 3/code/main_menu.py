@@ -8,6 +8,7 @@ from services.WeeklyProgressService import WeeklyProgressService
 from models.Supermarket import Supermarket
 from services.MapService import MapService
 from services.ActivityMonitorService import ActivityMonitorService
+from services.FoodPlannerService import FoodPlannerService
 import services
 from support_classes import DBManager, SmartWatch
 
@@ -45,6 +46,14 @@ class MainMenuScreen(QMainWindow):
         self.deleteLater()
         self.map_service_obj = MapService()
         self.map_service_obj.find_route()
+        self.ui.pushButton_7.clicked.connect(self.challenge_service)
+        self.ui.pushButton_5.clicked.connect(self.food_plan_service)
+        self.show()
+
+    def food_plan_service(self):
+        self.deleteLater()
+        food_plan_obj = FoodPlannerService()
+        food_plan_obj.createFoodPlanService()
 
     
     def monitor_activity_service(self):

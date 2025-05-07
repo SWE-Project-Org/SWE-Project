@@ -4,7 +4,7 @@ from ui_py import (grocery_planner_ui)
 def placeholder():
     pass
 
-class CreateFoodPlanScreen(QWidget):
+class CreateGroceryPlannerScreen(QWidget):
     def __init__(self, service):
         super().__init__()
         self.ui = grocery_planner_ui.Ui_Form()

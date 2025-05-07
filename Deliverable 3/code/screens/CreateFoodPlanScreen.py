@@ -1,5 +1,6 @@
 from PyQt6.QtWidgets import QWidget
 from ui_py import (create_food_plan_ui)
+import main_menu
 
 
 
@@ -9,8 +10,16 @@ class CreateFoodPlanScreen(QWidget):
         self.ui = create_food_plan_ui.Ui_Form()
         self.service = service
         self.ui.setupUi(self)
-        self.ui.pushButton_6.clicked.connect(self.placeholder) #back to main menu
-        self.ui.pushButton_5.clicked.connect(self.placeholder) #go to grocery planner
+        self.ui.pushButton_6.clicked.connect(self.show_main_menu_screen) #back to main menu
+        self.ui.pushButton_5.clicked.connect(self.go_to_grocery_planner) #go to grocery planner
+
+    def go_to_grocery_planner(self):
+        self.deleteLater()
+        self.service.enterGoal()
+
+    def show_main_menu_screen(self):
+        self.deleteLater()
+        self.main_menu = main_menu.MainMenuScreen()
 
     def placeholder(self):
         self.deleteLater()
