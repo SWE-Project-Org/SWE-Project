@@ -1,4 +1,6 @@
 class DBManager:
+    def __init__(self):
+         pass
     def store_activity(self):
         pass
 

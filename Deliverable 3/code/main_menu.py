@@ -2,6 +2,8 @@ from PyQt6.QtWidgets import QMainWindow
 import services.RewardService
 from ui_py import (main_menu_ui)
 from services.ChallengeService import ChallengeService
+
+from services.ImageUploadService import ImageUploadService
 from services.RewardService import RewardService
 from services.RegisterMealService import RegisterMealService
 from services.WeeklyProgressService import WeeklyProgressService
@@ -48,6 +50,9 @@ class MainMenuScreen(QMainWindow):
         self.map_service_obj = MapService()
         self.map_service_obj.find_route()
         self.ui.pushButton_7.clicked.connect(self.challenge_service)
+        self.ui.pushButton_6.clicked.connect(self.image_upload_service)
+        self.show()
+
         self.ui.pushButton_5.clicked.connect(self.food_plan_service)
         self.show()
 
@@ -70,6 +75,10 @@ class MainMenuScreen(QMainWindow):
         challenge_service = ChallengeService(db,services.RewardService.RewardService(db))
         challenge_service.start_daily_challenge()
 
+    def image_upload_service(self):
+        self.deleteLater()
+        image_upload_service = ImageUploadService()
+        image_upload_service.get_image()
     def reward_service(self):
         self.deleteLater()
         db = DBManager()
