@@ -10,6 +10,11 @@ class ImageUploadService():
     def __init__(self):
         pass
 
+    def get_image(self):            
+        #πρώτα καλεί διάφορα από την Πηγή και ελέγχοι
+        self.food_confirmation_screen = FoodConfirmationScreen(self)
+        self.food_confirmation_screen.show()
+
     def get_image_from_camera(self):
         pass
 
@@ -22,9 +27,3 @@ class ImageUploadService():
     def match_image_to_food(self):
         pass
 
-    def show_food_confirmation(self):
-        self.food_confirmation_screen = FoodConfirmationScreen(self)
-        self.food_confirmation_screen.show()
-
-    def food(self):
-        pass

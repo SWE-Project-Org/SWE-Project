@@ -31,4 +31,4 @@ class MainMenuScreen(QMainWindow):
     def image_upload_service(self):
         self.deleteLater()
         image_upload_service = ImageUploadService()
-        image_upload_service.show_food_confirmation()
+        image_upload_service.get_image()

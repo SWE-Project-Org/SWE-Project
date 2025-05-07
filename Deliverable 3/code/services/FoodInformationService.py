@@ -7,9 +7,9 @@ from models.SupermarketAPI import SupermarketAPI
 
 class FoodInformationService():
 
-    def __init__(self, db:DBManager):
-        self.db = db
-
+    def __init__(self):
+        pass
+    
     def get_info(self):
         pass
 
@@ -28,9 +28,11 @@ class FoodInformationService():
     def fetch_prices(self):
         pass
 
-    def show_food_information(self):
+    def get_food_info(self):
+        #Εδώ καλούνται όλες οι παραπάνω μεθοδοί
         self.food_information_screen = FoodInformationScreen(self)
         self.food_information_screen.show()
+        #μετά καλούνται όλες οι παρακάτω μεθόδοι
 
     def save_recently_scanned_food(self):
         pass
