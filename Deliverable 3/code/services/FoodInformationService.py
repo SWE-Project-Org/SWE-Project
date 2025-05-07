@@ -32,10 +32,10 @@ class FoodInformationService():
         self.food_information_screen = FoodInformationScreen(self)
         self.food_information_screen.show()
 
-    def save_recently_scanned_food(self)
+    def save_recently_scanned_food(self):
         pass
     
-    def get_recently_scanned_foods(self)
+    def get_recently_scanned_foods(self):
         pass
 
     def show_recently_scanned(self):
