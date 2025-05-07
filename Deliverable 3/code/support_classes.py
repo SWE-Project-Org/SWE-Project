@@ -35,7 +35,6 @@ class DBManager:
     def get_user_points(self) -> int:
         pass
 
-    # returns balance
     def subtract_user_points(self) -> int:
         pass
 
@@ -44,3 +43,6 @@ class DBManager:
 
     def get_all_coupon_codes(self):
         pass
+
+    def get_weekly_data(self):
+        return 'weekly data'

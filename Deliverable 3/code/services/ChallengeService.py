@@ -17,38 +17,44 @@ class ChallengeService:
     def start_daily_challenge(self):
         
         try:
-            if self.is_daily_completed(self):
+            if self.is_daily_completed():
                 raise ValueError("Daily challenged has been completed for today")
 
-            challenge = self.create_challenge(self)
+            challenge = self.create_challenge()
             calories = challenge.get_calories()
-            timer = self.create_timer(self)
+            timer = self.create_timer()
             timer.StartTimer()
-
-            dScreen = DailyChallengeScreen(self)
-            dScreen.show()
+            self.dScreen = DailyChallengeScreen(self)
+            self.dScreen.show()
 
         except Exception as e:
             error_message = f":{str(e)}"
-            nScreen = NotificationScreen(error_message)
-            nScreen.show()
+            print(error_message)
+            self.nScreen = NotificationScreen(error_message)
+            self.nScreen.show()
 
     # when the user clicks "Done" in the DailyChallengeScreen
     def challenge_completed(self) -> None:
         self.reward_service.reward_points_to_user(100)
-        self.db.save_challenge(self.current_challenge)
+        self.db.save_challenge()
         self.current_challenge = None
 
-        nScreen = NotificationScreen(self,"Congrats for completing the daily challenge 100 points have been awarded!")
-        nScreen.show()
+        self.menu = main_menu.MainMenuScreen()
+        self.menu.show()
+
+        # self.nScreen = NotificationScreen(self,"Congrats for completing the daily challenge 100 points have been awarded!")
+        # self.nScreen.show()
+
+
+
 
     # when the user clicks "Abort" in the DailyChallengeScreen
     def challenge_aborted(self) ->None:
-        menu = main_menu.MainMenuScreen()
-        menu.show()
+        self.menu = main_menu.MainMenuScreen()
+        self.menu.show()
 
-        nScreen = NotificationScreen(self,"Challenge has been aborted")
-        nScreen.show()
+        self.nScreen = NotificationScreen(self,"Challenge has been aborted")
+        self.nScreen.show()
 
 
     def is_daily_completed(self) -> bool:

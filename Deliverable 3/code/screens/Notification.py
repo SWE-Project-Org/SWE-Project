@@ -1,10 +1,14 @@
 from PyQt6.QtWidgets import QWidget
+from ui_py import notification_ui
+from PyQt6.QtCore import QTimer
 
-# make this overay a small rect box in the upper right corner with the message 
 class NotificationScreen(QWidget):
-    def __init__(self,msg: str):
+    def __init__(self,msg: str, service):
         super().__init__()
-        # self.ui = daily_challenge_ui.Ui_Form() # notification screen ui
-        # self.ui.setupUi(self)
+        self.ui = notification_ui.Ui_Form()
+        self.ui.setupUi(self)
+        self.service = service
         self.msg = msg
+        self.show()
+        QTimer.singleShot(3000, self.close)
 
