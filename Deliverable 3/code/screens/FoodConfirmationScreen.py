@@ -8,4 +8,3 @@ class FoodConfirmationScreen(QWidget):
         self.ui.setupUi(self)
         self.ui.pushButton_10.clicked.connect(placeholder) #
         self.ui.pushButton_9.clicked.connect(placeholder) #
-

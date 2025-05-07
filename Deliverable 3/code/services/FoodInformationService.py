@@ -41,4 +41,3 @@ class FoodInformationService():
     def show_recently_scanned(self):
         self.recently_scanned_screen = RecentlyScannedScreen(self)
         self.recently_scanned_screen.show()
-

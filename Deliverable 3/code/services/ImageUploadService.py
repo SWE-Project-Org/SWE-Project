@@ -1,15 +1,14 @@
-from screens.FoodInformationScreen import FoodInformationScreen
-from screens.RecentlyScannedScreen import RecentlyScannedScreen
+from screens.FoodConfirmationScreen import FoodConfirmationScreen
 from models.DBManager import DBManager
 from models.Edible import Edible
 from models.Image import Image
-from models.CameraService import CameraService
+from models.CameraAPI import CameraAPI
 
 
 class ImageUploadService():
 
-    def __init__(self, db:DBManager):
-        self.db = db
+    def __init__(self):
+        pass
 
     def get_image_from_camera(self):
         pass
