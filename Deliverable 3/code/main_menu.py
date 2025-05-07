@@ -3,6 +3,9 @@ import services.RewardService
 from ui_py import (main_menu_ui)
 from services.ChallengeService import ChallengeService
 from services.RewardService import RewardService
+from services.RegisterMealService import RegisterMealService
+from services.WeeklyProgressService import WeeklyProgressService
+from models.Supermarket import Supermarket
 from services.MapService import MapService
 from services.ActivityMonitorService import ActivityMonitorService
 import services
@@ -21,7 +24,22 @@ class MainMenuScreen(QMainWindow):
         self.ui.pushButton_7.clicked.connect(self.reward_service)
         self.ui.pushButton_2.clicked.connect(self.map_service)
         self.ui.pushButton.clicked.connect(self.challenge_service)
+        self.ui.pushButton_3.clicked.connect(self.register_meal_service)
+        self.ui.pushButton_4.clicked.connect(self.weekly_progress_service)
         self.show()
+
+    def weekly_progress_service(self):
+        self.deleteLater()
+        db = DBManager()
+        self.weekly_progress_obj = WeeklyProgressService(db)
+        self.weekly_progress_obj.weekly_progress()
+
+    def register_meal_service(self):
+        self.deleteLater()
+        db = DBManager()
+        supermarket = Supermarket()
+        self.register_meal_obj = RegisterMealService(db, supermarket)
+        self.register_meal_obj.register_food()
 
     def map_service(self):
         self.deleteLater()
