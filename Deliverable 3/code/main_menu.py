@@ -30,6 +30,7 @@ class MainMenuScreen(QMainWindow):
         self.ui.pushButton_3.clicked.connect(self.register_meal_service)
         self.ui.pushButton_4.clicked.connect(self.weekly_progress_service)
         self.ui.pushButton_5.clicked.connect(self.food_plan_service)
+        self.ui.pushButton_6.clicked.connect(self.image_upload_service)
         self.show()
 
     def weekly_progress_service(self):
@@ -79,6 +80,7 @@ class MainMenuScreen(QMainWindow):
         self.deleteLater()
         image_upload_service = ImageUploadService()
         image_upload_service.get_image()
+
     def reward_service(self):
         self.deleteLater()
         db = DBManager()
