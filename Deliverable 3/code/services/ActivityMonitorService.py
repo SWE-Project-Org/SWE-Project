@@ -19,7 +19,6 @@ class ActivityMonitorService():
         self.activities = self.get_activities()
         self.activity_selection_screen = ActivitySelectionScreen(self)
         self.activity_selection_screen.show()
-        self.notification = NotificationScreen("none", self)
 
 
     def create_activity(self):

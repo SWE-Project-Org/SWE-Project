@@ -1,5 +1,5 @@
 from ui_py.create_food_plan_ui import Ui_Form
-from models.Supermarket import SupermarketAPI
+from models.Supermarket import Supermarket
 from models.FoodPlan import FoodPlan
 from screens.CreateFoodPlanScreen import CreateFoodPlanScreen
 from screens.GroceryPlannerScreen import CreateGroceryPlannerScreen

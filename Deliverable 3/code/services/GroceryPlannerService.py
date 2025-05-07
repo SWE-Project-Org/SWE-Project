@@ -1,4 +1,4 @@
-from models.Supermarket import SupermarketAPI
+from models.Supermarket import Supermarket
 from models.Ingredients import Ingredients
 from models.DBManager import DBManager
 from screens.FoodPlanSummaryScreen import FoodPlanSummaryScreen

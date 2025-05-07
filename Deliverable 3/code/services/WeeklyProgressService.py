@@ -1,4 +1,4 @@
-from service_classes import DBManager
+from support_classes import DBManager
 from models.Progress import Progress
 from models.Chart import Chart
 from screens.WeeklyProgressScreen import WeeklyProgressScreen

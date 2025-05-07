@@ -27,6 +27,7 @@ class MainMenuScreen(QMainWindow):
         self.ui.pushButton.clicked.connect(self.challenge_service)
         self.ui.pushButton_3.clicked.connect(self.register_meal_service)
         self.ui.pushButton_4.clicked.connect(self.weekly_progress_service)
+        self.ui.pushButton_5.clicked.connect(self.food_plan_service)
         self.show()
 
     def weekly_progress_service(self):
