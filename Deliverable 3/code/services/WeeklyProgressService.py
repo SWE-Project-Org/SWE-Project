@@ -6,9 +6,12 @@ from models.DBManager import  DBManager
 class WeeklyProgressService:
     def __init__(self, db:DBManager):
         self.db = db
+        self.weekly_data = None
+        self.progress = None
+        self.chart = None
 
     def weekly_progress(self):
-        weekly_data = self.db.get_weekly_data()
+        self.weekly_data = self.db.get_weekly_data()
         self.sufficient_data()
         self.avg_daily_calories()
         self.total_activity_calories()

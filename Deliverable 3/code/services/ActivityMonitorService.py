@@ -11,16 +11,13 @@ class ActivityMonitorService():
     def __init__(self, db:DBManager, smartwatch:SmartWatch):
         self.db = db
         self.smartwatch = smartwatch
-        self.current_challenge = None
-        self.current_timer = None
-        self.current_screen = None
-
+        self.timer = None
+        self.activity = None
 
     def monitor_activity(self):
         self.activities = self.get_activities()
         self.activity_selection_screen = ActivitySelectionScreen(self)
         self.activity_selection_screen.show()
-
 
     def create_activity(self):
         self.activity = Activity()

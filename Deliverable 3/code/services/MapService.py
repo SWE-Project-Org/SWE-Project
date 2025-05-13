@@ -8,6 +8,8 @@ from screens.RouteDisplayScreen import RouteDisplayScreen
 class MapService:
     def __init__(self):
         self.choices = 'route choices'
+        self.map = None
+        self.locations = None
 
     def find_route(self):
         self.map = self.get_map()
