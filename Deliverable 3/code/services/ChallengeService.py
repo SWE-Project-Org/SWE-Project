@@ -1,4 +1,5 @@
-from support_classes import Timer, DBManager
+from models.DBManager import  DBManager
+from models.Timer import Timer
 from services.RewardService import RewardService
 from models.Challenge import Challenge
 from screens.Notification import NotificationScreen
@@ -23,7 +24,7 @@ class ChallengeService:
             challenge = self.create_challenge()
             calories = challenge.get_calories()
             timer = self.create_timer()
-            timer.StartTimer()
+            timer.start_timer()
             self.dScreen = DailyChallengeScreen(self)
             self.dScreen.show()
 
@@ -42,8 +43,8 @@ class ChallengeService:
         self.menu = main_menu.MainMenuScreen()
         self.menu.show()
 
-        # self.nScreen = NotificationScreen(self,"Congrats for completing the daily challenge 100 points have been awarded!")
-        # self.nScreen.show()
+        self.nScreen = NotificationScreen(self,"Congrats for completing the daily challenge 100 points have been awarded!")
+        self.nScreen.show()
 
 
 
@@ -58,8 +59,8 @@ class ChallengeService:
 
 
     def is_daily_completed(self) -> bool:
-        return False
-        # return self.db.is_daily_challenge_completed()
+        # return False
+        return self.db.is_daily_challenge_completed()
 
     def create_challenge(self) -> Challenge:
         self.current_challenge = Challenge()

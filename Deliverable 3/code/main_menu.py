@@ -12,7 +12,8 @@ from services.MapService import MapService
 from services.ActivityMonitorService import ActivityMonitorService
 from services.FoodPlannerService import FoodPlannerService
 import services
-from support_classes import DBManager, SmartWatch
+from models.DBManager import  DBManager
+from models.SmartWatch import SmartWatch  
 
 
 

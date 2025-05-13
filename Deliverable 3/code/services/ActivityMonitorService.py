@@ -1,10 +1,11 @@
-from support_classes import Activity, Timer
 from screens.ActivitySelectionScreen import ActivitySelectionScreen
 from screens.ActivityMonitorScreen import ActivityMonitorScreen
 from screens.ActivitySummaryScreen import ActivitySummaryScreen
 from screens.Notification import NotificationScreen
-from support_classes import DBManager, SmartWatch
-
+from models.DBManager import  DBManager
+from models.SmartWatch import SmartWatch
+from models.Timer import Timer
+from models.Activity import Activity
 
 class ActivityMonitorService():
     def __init__(self, db:DBManager, smartwatch:SmartWatch):
@@ -26,7 +27,7 @@ class ActivityMonitorService():
         self.timer = self.create_timer()
         self.activity_monitor_screen = ActivityMonitorScreen(self)
         self.activity_monitor_screen.show()
-        self.timer.StartTimer()
+        self.timer.start_timer()
         self.smartwatch_reading = self.smartwatch.get_smartwatch_reading()
         self.current_calories_burned = self.calories_burned()
         self.current_time_elapsed = self.timer.time_elapsed()
