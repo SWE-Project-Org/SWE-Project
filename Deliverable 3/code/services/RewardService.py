@@ -1,11 +1,11 @@
 import datetime
-from support_classes import Timer, DBManager
 from models.Offer import Offer 
 from models.CouponCode import CouponCode
 from screens.Notification import NotificationScreen 
 from screens.RedeemPoints import RedeemPointsScreen
 from screens.Confirm import ConfirmScreen
 from screens.CouponCode import CouponCodeScreen
+from models.DBManager import  DBManager
 import main_menu
 
 class RewardService:

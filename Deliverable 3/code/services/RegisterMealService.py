@@ -1,7 +1,8 @@
-from support_classes import DBManager
 from screens.RegisterMealScreen import RegisterMealScreen
 from models.Supermarket import Supermarket
 from models.RegisteredFood import RegisteredFood
+from models.DBManager import  DBManager
+
 
 class RegisterMealService:
     def __init__(self, db:DBManager, supermarket:Supermarket):

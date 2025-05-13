@@ -1,7 +1,7 @@
-from support_classes import DBManager
 from models.Progress import Progress
 from models.Chart import Chart
 from screens.WeeklyProgressScreen import WeeklyProgressScreen
+from models.DBManager import  DBManager
 
 class WeeklyProgressService:
     def __init__(self, db:DBManager):
