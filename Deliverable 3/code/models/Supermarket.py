@@ -4,8 +4,12 @@ from .Offer import Offer
 class Supermarket:
     def __init__(self):
         pass
-    def get_food_list():
+
+    def get_food_list(self):
         return list()
+    
+    def fetch_prices(self):
+        return 'prices'
 
     def fetch_offers_from_API(self) -> list[Offer]:
         return [

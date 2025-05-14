@@ -1,45 +1,45 @@
+from screens.ScanQRScreen import ScanQRScreen
 from screens.FoodInformationScreen import FoodInformationScreen
-from screens.RecentlyScannedScreen import RecentlyScannedScreen
 from models.DBManager import DBManager
 from models.RecentlyScannedFood import RecentlyScannedFood
-from models.SupermarketAPI import SupermarketAPI
-
+from models.Supermarket import Supermarket
 
 class FoodInformationService():
-
-    def __init__(self):
-        pass
+    def __init__(self, db: DBManager, supermarket: Supermarket, image_upload_service):
+        self.db = db
+        self.supermarket = supermarket
+        self.recently_scanned_foods = None
+        self.image_upload_service = image_upload_service
     
-    def get_info(self):
-        pass
+    def food_info(self):
+        self.recently_scanned_foods = self.db.get_recently_scanned_foods()
+        self.scan_qr_screen = ScanQRScreen(self.image_upload_service)
+        self.scan_qr_screen.show()
 
-    def get_ingredients(self):
-        pass
+    def get_food_info(self):
+        info = self.db.get_info()
+        ingredients = self.db.get_ingredients()
+        allergies = self.db.get_allergies()
+        self.check_for_allergies(allergies, ingredients)
+        rating = self.rate_dietary_value()
+        prices = self.db.fetch_prices()
+        self.food_information_screen = FoodInformationScreen(self)
+        self.food_information_screen.show()
+        
+    def food_info_done(self):
+        from main_menu import MainMenuScreen
+        recently_scanned_food = RecentlyScannedFood()
+        self.db.save_recently_scanned_food(recently_scanned_food)
+        self.main_menu = MainMenuScreen()
 
-    def get_allergies(self):
-        pass
-
-    def check_for_allergies(self):
+    def check_for_allergies(self, allergies, ingredients):
         pass
 
     def rate_dietary_value(self):
-        pass
-    
-    def fetch_prices(self):
-        pass
+        return 4
 
-    def get_food_info(self):
-        #Εδώ καλούνται όλες οι παραπάνω μεθοδοί
-        self.food_information_screen = FoodInformationScreen(self)
-        self.food_information_screen.show()
-        #μετά καλούνται όλες οι παρακάτω μεθόδοι
 
-    def save_recently_scanned_food(self):
-        pass
-    
-    def get_recently_scanned_foods(self):
-        pass
 
-    def show_recently_scanned(self):
-        self.recently_scanned_screen = RecentlyScannedScreen(self)
-        self.recently_scanned_screen.show()
+
+
+

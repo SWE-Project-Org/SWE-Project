@@ -2,7 +2,7 @@ from PyQt6.QtWidgets import QMainWindow
 from ui_py import (main_menu_ui)
 
 from instanciation import register_meal_service,weekly_progress_service,map_service
-from instanciation import food_planner_service,activity_monitor_service,reward_service,challenge_service,image_upload_service
+from instanciation import food_planner_service,activity_monitor_service,reward_service,challenge_service,image_upload_service, food_information_service
 
 
 class MainMenuScreen(QMainWindow):
@@ -18,7 +18,7 @@ class MainMenuScreen(QMainWindow):
         self.ui.pushButton_3.clicked.connect(self.register_meal_service)
         self.ui.pushButton_4.clicked.connect(self.weekly_progress_service)
         self.ui.pushButton_5.clicked.connect(self.food_plan_service)
-        self.ui.pushButton_6.clicked.connect(self.image_upload_service)
+        self.ui.pushButton_6.clicked.connect(self.food_information_service)
 
         self.weekly_progress_obj = weekly_progress_service
         self.register_meal_obj = register_meal_service
@@ -28,8 +28,7 @@ class MainMenuScreen(QMainWindow):
         self.challenge_service = challenge_service
         self.image_upload_service = image_upload_service
         self.reward_service = reward_service
-
-
+        self.food_information_service = food_information_service
         self.show()
 
     def weekly_progress_service(self):
@@ -57,9 +56,9 @@ class MainMenuScreen(QMainWindow):
         self.deleteLater()
         self.challenge_service.start_daily_challenge()
 
-    def image_upload_service(self):
+    def food_information_service(self):
         self.deleteLater()
-        self.image_upload_service.get_image()
+        self.food_information_service.food_info()
 
     def reward_service(self):
         self.deleteLater()

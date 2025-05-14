@@ -28,3 +28,24 @@ class DBManager:
 
     def get_weekly_data(self):
         return 'weekly data'
+    
+    def get_recently_scanned_foods(self):
+        return 'return_recently_scanned_foods'
+    
+    def get_info(self):
+        return 'info'
+    
+    def get_ingredients(self):
+        return 'ingredients'
+    
+    def get_allergies(self):
+        return 'allergies'
+    
+    def save_recently_scanned_food(self, recently_scanned_food):
+        pass
+
+    def match_image_to_food(self):
+        return 'MatchedFood'
+    
+    def fetch_prices(self):
+        return 'prices'

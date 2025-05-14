@@ -7,8 +7,8 @@ class FoodInformationScreen(QWidget):
         self.ui = food_info_ui.Ui_Form()
         self.service = service
         self.ui.setupUi(self)
-        self.ui.pushButton_9.clicked.connect(self.show_recently_scanned) #DONE
+        self.ui.pushButton_9.clicked.connect(self.service_food_info_done) #DONE
 
-    def show_recently_scanned(self):
+    def service_food_info_done(self):
         self.deleteLater()
-        self.service.show_recently_scanned()
+        self.service.food_info_done()

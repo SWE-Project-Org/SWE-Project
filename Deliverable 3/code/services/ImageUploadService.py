@@ -2,28 +2,29 @@ from screens.FoodConfirmationScreen import FoodConfirmationScreen
 from models.DBManager import DBManager
 from models.Edible import Edible
 from models.Image import Image
-from models.CameraAPI import CameraAPI
+from models.Camera import Camera
 
 
 class ImageUploadService():
+    def __init__(self, db: DBManager, camera: Camera, food_info_service):
+        self.camera = camera
+        self.db = db
+        self.food_info_service = food_info_service
 
-    def __init__(self):
-        pass
-
-    def get_image(self):            
-        #πρώτα καλεί διάφορα από την Πηγή και ελέγχοι
-        self.food_confirmation_screen = FoodConfirmationScreen(self)
+    def get_image(self):
+        image = Image(self.camera.get_image_from_camera())
+        self.check_for_clarity(image)
+        self.get_QR(image)
+        matched_food = self.db.match_image_to_food()
+        edible = Edible(matched_food)            
+        self.food_confirmation_screen = FoodConfirmationScreen(self.food_info_service)
         self.food_confirmation_screen.show()
 
-    def get_image_from_camera(self):
+    def check_for_clarity(self, image):
         pass
 
-    def check_for_clarity(self):
+    def get_QR(self, image):
         pass
 
-    def get_QR(self):
-        pass
-
-    def match_image_to_food(self):
-        pass
+    
 
