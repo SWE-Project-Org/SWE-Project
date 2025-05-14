@@ -8,13 +8,14 @@ class RegisterMealService:
     def __init__(self, db:DBManager, supermarket:Supermarket):
         self.db = db
         self.supermarket = supermarket
+        self.registered_food = None
 
     def register_food(self):
         self.resiger_meal_screen = RegisterMealScreen(self)
         self.resiger_meal_screen.show()
 
     def create_registered_food(self):
-        registered_food = RegisteredFood()
+        self.registered_food = RegisteredFood()
         exceeded = self.db.update_calorie_counter()
         self.store_food()
         self.register_food()
