@@ -12,7 +12,6 @@ class ChallengeService:
         self.reward_service = reward_service
         self.current_challenge = None
         self.current_timer = None
-        self.current_screen = None
 
     # when the user clicks "daily challenge" from the main menu this should run
     def start_daily_challenge(self):

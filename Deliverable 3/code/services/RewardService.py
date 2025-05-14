@@ -6,17 +6,19 @@ from screens.RedeemPoints import RedeemPointsScreen
 from screens.Confirm import ConfirmScreen
 from screens.CouponCode import CouponCodeScreen
 from models.DBManager import  DBManager
+from models.Supermarket import Supermarket
 import main_menu
 
 class RewardService:
-    def __init__(self, db:DBManager):
+    def __init__(self, db:DBManager,superAPI:Supermarket):
         self.db = db
+        self.sAPI = superAPI
 
     # when the user clicks on "Redeem points" from the main menu
     def get_offers(self):
         
         try:
-            offers = self.fetch_offers_from_API()
+            offers = self.sAPI.fetch_offers_from_API()
             if len(offers) <= 0:
                 raise ValueError("No offers found")
 
@@ -34,24 +36,24 @@ class RewardService:
     def redeem_offer(self,offer: Offer,index,times):
             
         try: 
-            # self.rScreen = ConfirmScreen()
-            # self.rScreen.show()
+            self.rScreen = ConfirmScreen()
+            self.rScreen.show()
 
             # if he agrees proceed with : 
-            # self.check_if_offer_valid(offer)
-            # self.compare_redeem_limit(offer,times)
+            self.check_if_offer_valid(offer)
+            self.compare_redeem_limit(offer,times)
 
 
-            # user_points = self.db.get_user_points()
+            user_points = self.db.get_user_points()
 
-            # if user_points - offer.points < 0:
-            #     raise ValueError("Not enough points to redeem")
+            if user_points - offer.points < 0:
+                raise ValueError("Not enough points to redeem")
                 
-            # remaining = user_points - offer.points
-            # ccode = CouponCode(offer)
-            # self.db.save_coupon_code(ccode)
+            remaining = user_points - offer.points
+            ccode = CouponCode(offer)
+            self.db.save_coupon_code(ccode)
 
-            # coupon_codes = self.db.get_all_coupon_codes()
+            coupon_codes = self.db.get_all_coupon_codes()
 
             self.cScreen = CouponCodeScreen(self)
             self.cScreen.show()
@@ -64,37 +66,6 @@ class RewardService:
             self.nScreen.show()
 
         
-
-
-
-    def fetch_offers_from_API(self) -> list[Offer]:
-        return [
-            Offer(
-            points=100,
-            description="Masoutis",
-            validTill=datetime.datetime.now() + datetime.timedelta(days=30),
-            redeemLimit=5
-            ),
-            Offer(
-            points=200,
-            description="Sklavenitis",
-            validTill=datetime.datetime.now() + datetime.timedelta(days=60),
-            redeemLimit=2
-            ),
-            Offer(
-            points=50,
-            description="MyMarket",
-            validTill=datetime.datetime.now() + datetime.timedelta(days=15),
-            redeemLimit=10
-            ),
-            Offer(
-            points=500,
-            description="Lidl",
-            validTill=datetime.datetime.now() + datetime.timedelta(days=90),
-            redeemLimit=1
-            )
-        ]
-
     def check_if_offer_valid(self,offer: Offer):
         pass
 
