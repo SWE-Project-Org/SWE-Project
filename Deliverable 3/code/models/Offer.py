@@ -1,5 +1,3 @@
-import datetime
-
 class Offer:
     def __init__(self,points,description,validTill,redeemLimit):
         self.points = points

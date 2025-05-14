@@ -20,7 +20,7 @@ map_service = MapService()
 food_planner_service = FoodPlannerService()
 activity_monitor_service = ActivityMonitorService(db, smartwatch)
 
-reward_service = RewardService(db)
+reward_service = RewardService(db,supermarket)
 challenge_service = ChallengeService(db,reward_service)
 
 image_upload_service = ImageUploadService()
