@@ -10,7 +10,7 @@ class MapService:
         self.choices = 'route choices'
         self.map = None
         self.locations = None
-        
+
     def find_route(self):
         self.map = self.get_map()
         self.choice_entry_screen = ChoiceEntryScreen(self)
