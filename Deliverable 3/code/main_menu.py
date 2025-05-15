@@ -11,14 +11,14 @@ class MainMenuScreen(QMainWindow):
         self.ui = main_menu_ui.Ui_MainWindow()  
         self.ui.setupUi(self) 
         # buttons from the main screen
-        self.ui.pushButton_8.clicked.connect(self.monitor_activity_service)
-        self.ui.pushButton_7.clicked.connect(self.reward_service)
-        self.ui.pushButton_2.clicked.connect(self.map_service)
-        self.ui.pushButton.clicked.connect(self.challenge_service)
-        self.ui.pushButton_3.clicked.connect(self.register_meal_service)
-        self.ui.pushButton_4.clicked.connect(self.weekly_progress_service)
-        self.ui.pushButton_5.clicked.connect(self.food_plan_service)
-        self.ui.pushButton_6.clicked.connect(self.food_information_service)
+        self.ui.pushButton_8.clicked.connect(self.on_click_monitor_activity_btn)
+        self.ui.pushButton_7.clicked.connect(self.on_click_redeem_points_btn)
+        self.ui.pushButton_2.clicked.connect(self.on_click_route_btn)
+        self.ui.pushButton.clicked.connect(self.on_click_challenge_btn)
+        self.ui.pushButton_3.clicked.connect(self.on_click_register_meal_btn)
+        self.ui.pushButton_4.clicked.connect(self.on_click_weekly_progress_btn)
+        self.ui.pushButton_5.clicked.connect(self.on_click_create_food_plan_btn)
+        self.ui.pushButton_6.clicked.connect(self.on_click_food_information_btn)
 
         self.weekly_progress_obj = weekly_progress_service
         self.register_meal_obj = register_meal_service
@@ -31,35 +31,35 @@ class MainMenuScreen(QMainWindow):
         self.food_information_service = food_information_service
         self.show()
 
-    def weekly_progress_service(self):
+    def on_click_weekly_progress_btn(self):
         self.deleteLater()
         self.weekly_progress_obj.weekly_progress()
 
-    def register_meal_service(self):
+    def on_click_register_meal_btn(self):
         self.deleteLater()
         self.register_meal_obj.register_food()
 
-    def map_service(self):
+    def on_click_route_btn(self):
         self.deleteLater()
         self.map_service_obj.find_route()
 
-    def food_plan_service(self):
+    def on_click_create_food_plan_btn(self):
         self.deleteLater()
         self.food_plan_obj.createFoodPlanService()
 
     
-    def monitor_activity_service(self):
+    def on_click_monitor_activity_btn(self):
         self.deleteLater()
         self.monitor_activity_obj.monitor_activity()
 
-    def challenge_service(self):
+    def on_click_challenge_btn(self):
         self.deleteLater()
         self.challenge_service.start_daily_challenge()
 
-    def food_information_service(self):
+    def on_click_food_information_btn(self):
         self.deleteLater()
         self.food_information_service.food_info()
 
-    def reward_service(self):
+    def on_click_redeem_points_btn(self):
         self.deleteLater()
         self.reward_service.get_offers()
