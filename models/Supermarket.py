@@ -38,3 +38,6 @@ class Supermarket:
             redeemLimit=1
             )
         ]
+    
+    def getFoodAvailabilty(self):
+        return 'availability'

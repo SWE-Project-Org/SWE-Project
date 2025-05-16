@@ -6,8 +6,9 @@ from screens.FoodPlanSummaryScreen import FoodPlanSummaryScreen
 
 class GroceryPlannerService:
 
-    def __init__(self):
-      pass
+    def __init__(self, db: DBManager, supermarket: Supermarket):
+        self.db = db
+        self.supermarket = supermarket
     
     def createGroceryService(self):
         self.create_grocery_planner_screen = FoodPlanSummaryScreen(self)
@@ -16,12 +17,9 @@ class GroceryPlannerService:
     def analyzeMeals(self):
         pass
 
-    def getFoodAvailability(self):
-        pass
-
     def calculateFoodCost(self):
         pass
+    
     def createCostwBudget(self):
         pass
-    def storeIngredientList(self):
-        pass
+    

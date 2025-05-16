@@ -49,3 +49,6 @@ class DBManager:
     
     def fetch_prices(self):
         return 'prices'
+    
+    def storeIngredientList(self):
+        pass
