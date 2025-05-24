@@ -30,14 +30,15 @@ class ChallengeService:
         except Exception as e:
             error_message = f":{str(e)}"
             print(error_message)
-            self.nScreen = NotificationScreen(error_message)
+            self.nScreen = NotificationScreen(error_message,self)
             self.nScreen.show()
 
     # when the user clicks "Done" in the DailyChallengeScreen
     def challenge_completed(self) -> None:
         self.reward_service.reward_points_to_user(100)
-        self.db.save_challenge()
+        self.db.save_challenge(self.current_challenge)
         self.current_challenge = None
+        self.current_timer = None
 
         self.menu = main_menu.MainMenuScreen()
         self.menu.show()
@@ -63,6 +64,7 @@ class ChallengeService:
 
     def create_challenge(self) -> Challenge:
         self.current_challenge = Challenge()
+        self.current_challenge = self.current_challenge.create_challenge()
         return self.current_challenge
     
     def create_timer(self) -> Timer:

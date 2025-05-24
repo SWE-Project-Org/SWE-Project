@@ -21,11 +21,10 @@ class RedeemPointsScreen(QWidget):
 
     def redeem_offer(self):
         # Get the selected offer and number of times to redeem
-        # offer = self.get_selected_offer()
-        # times = self.get_number_of_times_to_redeem()
+        offer = self.select_offer_from_screen()
+        times = self.get_number_of_times_to_redeem()
 
-         # Call the redeem_offer(offer,index,times)
-        self.service.redeem_offer(Offer(points=100,description="Test Offer",validTill="2023-12-31",redeemLimit=5),0,1)
+        self.service.redeem_offer(offer,times)
 
     def show_main_menu_screen(self):
         self.deleteLater()
@@ -36,5 +35,8 @@ class RedeemPointsScreen(QWidget):
         self.cScreen = CouponCodeScreen(self)
         self.cScreen.show()
 
-    def select_offer_from_screen(self,offer: Offer):
-        pass
+    def select_offer_from_screen(self) -> Offer:
+        return Offer(points=100,description="Test Offer",validTill="2023-12-31",redeemLimit=5)
+
+    def get_number_of_times_to_redeem(self) -> int:
+        return 1

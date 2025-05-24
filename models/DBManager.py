@@ -1,3 +1,6 @@
+from models.Challenge import Challenge
+
+
 class DBManager:
     def __init__(self):
          pass
@@ -10,7 +13,7 @@ class DBManager:
     def is_daily_challenge_completed(self) -> bool:
         pass
 
-    def save_challenge(self) -> None:
+    def save_challenge(self, challenge: Challenge) -> None:
         pass
 
     def get_user_points(self) -> int:
@@ -20,6 +23,10 @@ class DBManager:
     def subtract_user_points(self) -> int:
         pass
 
+    def update_user_points(self, points: int) -> None:
+        pass
+
+    # save the coupon code
     def save_coupon_code(self):
         pass
 
