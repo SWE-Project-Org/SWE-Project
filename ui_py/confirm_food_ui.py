@@ -14,10 +14,6 @@ class Ui_Form(object):
         Form.setObjectName("Form")
         Form.resize(412, 917)
         Form.setStyleSheet("background-color: #f4f4f4; border: 1px solid #000000;")
-        self.textBrowser = QtWidgets.QTextBrowser(parent=Form)
-        self.textBrowser.setGeometry(QtCore.QRect(80, 130, 256, 171))
-        self.textBrowser.setStyleSheet("color: black; border: 0;")
-        self.textBrowser.setObjectName("textBrowser")
         self.label = QtWidgets.QLabel(parent=Form)
         self.label.setGeometry(QtCore.QRect(50, 50, 321, 71))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Preferred)
@@ -58,6 +54,30 @@ class Ui_Form(object):
 "border-radius: 6px;\n"
 "    padding: 5px;")
         self.pushButton_10.setObjectName("pushButton_10")
+        self.label_2 = QtWidgets.QLabel(parent=Form)
+        self.label_2.setGeometry(QtCore.QRect(170, 140, 71, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_2.setFont(font)
+        self.label_2.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(parent=Form)
+        self.label_3.setGeometry(QtCore.QRect(170, 170, 61, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_3.setFont(font)
+        self.label_3.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_3.setObjectName("label_3")
+        self.label_4 = QtWidgets.QLabel(parent=Form)
+        self.label_4.setGeometry(QtCore.QRect(150, 270, 111, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_4.setFont(font)
+        self.label_4.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_4.setObjectName("label_4")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -65,17 +85,9 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.textBrowser.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:\'Noto Sans\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">Detected:</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt; font-weight:700;\">Chicken</span></p>\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'FreeSans\'; font-size:12pt; font-weight:700;\"><br /></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">Is this correct?</span></p></body></html>"))
         self.label.setText(_translate("Form", "CONFIRM FOOD"))
         self.pushButton_9.setText(_translate("Form", "Yes"))
         self.pushButton_10.setText(_translate("Form", "No"))
+        self.label_2.setText(_translate("Form", "Detected:"))
+        self.label_3.setText(_translate("Form", "Chicken"))
+        self.label_4.setText(_translate("Form", "Is this correct?"))

@@ -61,93 +61,8 @@ class Ui_Form(object):
         self.textBrowser.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.textBrowser.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.textBrowser.setObjectName("textBrowser")
-        self.pushButton_6 = QtWidgets.QPushButton(parent=Form)
-        self.pushButton_6.setGeometry(QtCore.QRect(20, 270, 271, 59))
-        font = QtGui.QFont()
-        font.setFamily("FreeSans")
-        font.setPointSize(13)
-        font.setBold(False)
-        self.pushButton_6.setFont(font)
-        self.pushButton_6.setStyleSheet("color: ffffff;background-color: #00000000;\n"
-"border-radius: 6px;\n"
-"    padding: 5px;")
-        self.pushButton_6.setObjectName("pushButton_6")
-        self.pushButton_7 = QtWidgets.QPushButton(parent=Form)
-        self.pushButton_7.setGeometry(QtCore.QRect(20, 340, 271, 59))
-        font = QtGui.QFont()
-        font.setFamily("FreeSans")
-        font.setPointSize(13)
-        font.setBold(False)
-        self.pushButton_7.setFont(font)
-        self.pushButton_7.setStyleSheet("color: ffffff;background-color: #00000000;\n"
-"border-radius: 6px;\n"
-"    padding: 5px;")
-        self.pushButton_7.setObjectName("pushButton_7")
-        self.pushButton_8 = QtWidgets.QPushButton(parent=Form)
-        self.pushButton_8.setGeometry(QtCore.QRect(20, 410, 271, 59))
-        font = QtGui.QFont()
-        font.setFamily("FreeSans")
-        font.setPointSize(13)
-        font.setBold(False)
-        self.pushButton_8.setFont(font)
-        self.pushButton_8.setStyleSheet("color: ffffff;background-color: #00000000;\n"
-"border-radius: 6px;\n"
-"    padding: 5px;")
-        self.pushButton_8.setObjectName("pushButton_8")
-        self.pushButton_9 = QtWidgets.QPushButton(parent=Form)
-        self.pushButton_9.setGeometry(QtCore.QRect(20, 480, 271, 59))
-        font = QtGui.QFont()
-        font.setFamily("FreeSans")
-        font.setPointSize(13)
-        font.setBold(False)
-        self.pushButton_9.setFont(font)
-        self.pushButton_9.setStyleSheet("color: ffffff;background-color: #00000000;\n"
-"border-radius: 6px;\n"
-"    padding: 5px;")
-        self.pushButton_9.setObjectName("pushButton_9")
-        self.pushButton_10 = QtWidgets.QPushButton(parent=Form)
-        self.pushButton_10.setGeometry(QtCore.QRect(20, 550, 271, 59))
-        font = QtGui.QFont()
-        font.setFamily("FreeSans")
-        font.setPointSize(13)
-        font.setBold(False)
-        self.pushButton_10.setFont(font)
-        self.pushButton_10.setStyleSheet("color: ffffff;background-color: #00000000;\n"
-"border-radius: 6px;\n"
-"    padding: 5px;")
-        self.pushButton_10.setObjectName("pushButton_10")
-        self.comboBox = QtWidgets.QComboBox(parent=Form)
-        self.comboBox.setGeometry(QtCore.QRect(320, 280, 79, 26))
-        self.comboBox.setStyleSheet("color: f4f4f4;  \n"
-"background-color: #f4f4f4;\n"
-"border-radius: 6px;\n"
-"    padding: 5px;")
-        self.comboBox.setObjectName("comboBox")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox.addItem("")
-        self.comboBox_2 = QtWidgets.QComboBox(parent=Form)
-        self.comboBox_2.setGeometry(QtCore.QRect(320, 350, 79, 26))
-        self.comboBox_2.setStyleSheet("color: f4f4f4;  \n"
-"background-color: #f4f4f4;\n"
-"border-radius: 6px;\n"
-"    padding: 5px;")
-        self.comboBox_2.setObjectName("comboBox_2")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
-        self.comboBox_2.addItem("")
         self.comboBox_3 = QtWidgets.QComboBox(parent=Form)
-        self.comboBox_3.setGeometry(QtCore.QRect(320, 430, 79, 26))
+        self.comboBox_3.setGeometry(QtCore.QRect(310, 330, 79, 26))
         self.comboBox_3.setStyleSheet("color: f4f4f4;  \n"
 "background-color: #f4f4f4;\n"
 "border-radius: 6px;\n"
@@ -162,7 +77,7 @@ class Ui_Form(object):
         self.comboBox_3.addItem("")
         self.comboBox_3.addItem("")
         self.comboBox_4 = QtWidgets.QComboBox(parent=Form)
-        self.comboBox_4.setGeometry(QtCore.QRect(320, 500, 79, 26))
+        self.comboBox_4.setGeometry(QtCore.QRect(310, 410, 79, 26))
         self.comboBox_4.setStyleSheet("color: f4f4f4;  \n"
 "background-color: #f4f4f4;\n"
 "border-radius: 6px;\n"
@@ -177,7 +92,7 @@ class Ui_Form(object):
         self.comboBox_4.addItem("")
         self.comboBox_4.addItem("")
         self.comboBox_5 = QtWidgets.QComboBox(parent=Form)
-        self.comboBox_5.setGeometry(QtCore.QRect(320, 570, 79, 26))
+        self.comboBox_5.setGeometry(QtCore.QRect(310, 490, 79, 26))
         self.comboBox_5.setStyleSheet("color: f4f4f4;  \n"
 "background-color: #f4f4f4;\n"
 "border-radius: 6px;\n"
@@ -202,6 +117,57 @@ class Ui_Form(object):
 "border-radius: 6px;\n"
 "    padding: 5px;")
         self.pushButton_12.setObjectName("pushButton_12")
+        self.label_8 = QtWidgets.QLabel(parent=Form)
+        self.label_8.setGeometry(QtCore.QRect(20, 320, 251, 51))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_8.setFont(font)
+        self.label_8.setStyleSheet("color: ffffff;background-color: #00000000;\n"
+"border-radius: 6px;\n"
+"    padding: 5px;")
+        self.label_8.setObjectName("label_8")
+        self.label_9 = QtWidgets.QLabel(parent=Form)
+        self.label_9.setGeometry(QtCore.QRect(20, 390, 251, 61))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_9.setFont(font)
+        self.label_9.setStyleSheet("color: ffffff;background-color: #00000000;\n"
+"border-radius: 6px;\n"
+"    padding: 5px;")
+        self.label_9.setObjectName("label_9")
+        self.label_10 = QtWidgets.QLabel(parent=Form)
+        self.label_10.setGeometry(QtCore.QRect(20, 470, 251, 61))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_10.setFont(font)
+        self.label_10.setStyleSheet("color: ffffff;background-color: #00000000;\n"
+"border-radius: 6px;\n"
+"    padding: 5px;")
+        self.label_10.setObjectName("label_10")
+        self.label_11 = QtWidgets.QLabel(parent=Form)
+        self.label_11.setGeometry(QtCore.QRect(20, 540, 251, 61))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_11.setFont(font)
+        self.label_11.setStyleSheet("color: ffffff;background-color: #00000000;\n"
+"border-radius: 6px;\n"
+"    padding: 5px;")
+        self.label_11.setObjectName("label_11")
+        self.comboBox_6 = QtWidgets.QComboBox(parent=Form)
+        self.comboBox_6.setGeometry(QtCore.QRect(310, 560, 79, 26))
+        self.comboBox_6.setStyleSheet("color: f4f4f4;  \n"
+"background-color: #f4f4f4;\n"
+"border-radius: 6px;\n"
+"    padding: 5px;")
+        self.comboBox_6.setObjectName("comboBox_6")
+        self.comboBox_6.addItem("")
+        self.comboBox_6.addItem("")
+        self.comboBox_6.addItem("")
+        self.comboBox_6.addItem("")
+        self.comboBox_6.addItem("")
+        self.comboBox_6.addItem("")
+        self.comboBox_6.addItem("")
+        self.comboBox_6.addItem("")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -221,27 +187,6 @@ class Ui_Form(object):
 "</style></head><body style=\" font-family:\'Noto Sans\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:13pt;\">My Points:</span></p>\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:13pt;\">2300</span></p></body></html>"))
-        self.pushButton_6.setText(_translate("Form", "Masoutis, 1500pt -> 4$"))
-        self.pushButton_7.setText(_translate("Form", "Masoutis, 1500pt -> 4$"))
-        self.pushButton_8.setText(_translate("Form", "Masoutis, 1500pt -> 4$"))
-        self.pushButton_9.setText(_translate("Form", "Masoutis, 1500pt -> 4$"))
-        self.pushButton_10.setText(_translate("Form", "Masoutis, 1500pt -> 4$"))
-        self.comboBox.setItemText(0, _translate("Form", "0"))
-        self.comboBox.setItemText(1, _translate("Form", "1"))
-        self.comboBox.setItemText(2, _translate("Form", "2"))
-        self.comboBox.setItemText(3, _translate("Form", "3"))
-        self.comboBox.setItemText(4, _translate("Form", "4"))
-        self.comboBox.setItemText(5, _translate("Form", "5"))
-        self.comboBox.setItemText(6, _translate("Form", "6"))
-        self.comboBox.setItemText(7, _translate("Form", "7"))
-        self.comboBox_2.setItemText(0, _translate("Form", "0"))
-        self.comboBox_2.setItemText(1, _translate("Form", "1"))
-        self.comboBox_2.setItemText(2, _translate("Form", "2"))
-        self.comboBox_2.setItemText(3, _translate("Form", "3"))
-        self.comboBox_2.setItemText(4, _translate("Form", "4"))
-        self.comboBox_2.setItemText(5, _translate("Form", "5"))
-        self.comboBox_2.setItemText(6, _translate("Form", "6"))
-        self.comboBox_2.setItemText(7, _translate("Form", "7"))
         self.comboBox_3.setItemText(0, _translate("Form", "0"))
         self.comboBox_3.setItemText(1, _translate("Form", "1"))
         self.comboBox_3.setItemText(2, _translate("Form", "2"))
@@ -267,3 +212,15 @@ class Ui_Form(object):
         self.comboBox_5.setItemText(6, _translate("Form", "6"))
         self.comboBox_5.setItemText(7, _translate("Form", "7"))
         self.pushButton_12.setText(_translate("Form", "Redeem"))
+        self.label_8.setText(_translate("Form", "Masoutis, 1500pt -> 4$"))
+        self.label_9.setText(_translate("Form", "AB, 1500pt -> 4$"))
+        self.label_10.setText(_translate("Form", "Sklavenitis, 1500pt -> 4$"))
+        self.label_11.setText(_translate("Form", "Galaxias, 1500pt -> 4$"))
+        self.comboBox_6.setItemText(0, _translate("Form", "0"))
+        self.comboBox_6.setItemText(1, _translate("Form", "1"))
+        self.comboBox_6.setItemText(2, _translate("Form", "2"))
+        self.comboBox_6.setItemText(3, _translate("Form", "3"))
+        self.comboBox_6.setItemText(4, _translate("Form", "4"))
+        self.comboBox_6.setItemText(5, _translate("Form", "5"))
+        self.comboBox_6.setItemText(6, _translate("Form", "6"))
+        self.comboBox_6.setItemText(7, _translate("Form", "7"))

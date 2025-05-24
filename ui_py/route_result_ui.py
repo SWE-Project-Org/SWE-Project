@@ -14,12 +14,6 @@ class Ui_Form(object):
         Form.setObjectName("Form")
         Form.resize(412, 917)
         Form.setStyleSheet("background-color: #f4f4f4; border: 1px solid #000000;")
-        self.textBrowser = QtWidgets.QTextBrowser(parent=Form)
-        self.textBrowser.setGeometry(QtCore.QRect(61, 520, 291, 91))
-        self.textBrowser.setStyleSheet("border: 0; \n"
-"color: #000000\n"
-";")
-        self.textBrowser.setObjectName("textBrowser")
         self.pushButton_8 = QtWidgets.QPushButton(parent=Form)
         self.pushButton_8.setGeometry(QtCore.QRect(108, 713, 181, 59))
         font = QtGui.QFont()
@@ -65,6 +59,30 @@ class Ui_Form(object):
 "border-radius: 6px;\n"
 "    padding: 5px;")
         self.pushButton_9.setObjectName("pushButton_9")
+        self.label_4 = QtWidgets.QLabel(parent=Form)
+        self.label_4.setGeometry(QtCore.QRect(80, 510, 261, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_4.setFont(font)
+        self.label_4.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_4.setObjectName("label_4")
+        self.label_5 = QtWidgets.QLabel(parent=Form)
+        self.label_5.setGeometry(QtCore.QRect(140, 540, 111, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_5.setFont(font)
+        self.label_5.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_5.setObjectName("label_5")
+        self.label_6 = QtWidgets.QLabel(parent=Form)
+        self.label_6.setGeometry(QtCore.QRect(130, 570, 131, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_6.setFont(font)
+        self.label_6.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_6.setObjectName("label_6")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -72,16 +90,9 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.textBrowser.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:\'Noto Sans\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:13pt;\">Πλατεία Γεωργίου - Πλατεία Όλγας</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:13pt;\">Time: 11min</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:13pt;\">Calories: 106kcal</span></p></body></html>"))
         self.pushButton_8.setText(_translate("Form", "Back"))
         self.label.setText(_translate("Form", "FIND A ROUTE"))
         self.pushButton_9.setText(_translate("Form", "Done"))
+        self.label_4.setText(_translate("Form", "Πλατεία Γεωργίου - Πλατεία \'Ολγας"))
+        self.label_5.setText(_translate("Form", "Time: 00:27:32"))
+        self.label_6.setText(_translate("Form", "Calories: 357kcal"))

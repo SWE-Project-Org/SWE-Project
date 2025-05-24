@@ -14,10 +14,16 @@ class Ui_Form(object):
         Form.setObjectName("Form")
         Form.resize(413, 225)
         Form.setStyleSheet("background-color: #f4f4f4; border: 3px solid ")
-        self.textBrowser = QtWidgets.QTextBrowser(parent=Form)
-        self.textBrowser.setGeometry(QtCore.QRect(80, 20, 256, 192))
-        self.textBrowser.setStyleSheet("border: 0; color: black;")
-        self.textBrowser.setObjectName("textBrowser")
+        self.label_8 = QtWidgets.QLabel(parent=Form)
+        self.label_8.setGeometry(QtCore.QRect(20, 40, 381, 141))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_8.setFont(font)
+        self.label_8.setStyleSheet("color: ffffff;background-color: #00000000;\n"
+"border-radius: 6px;\n"
+"    padding: 5px;")
+        self.label_8.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_8.setObjectName("label_8")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -25,11 +31,4 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.textBrowser.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:\'Noto Sans\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:13pt;\">Notification Message</span></p></body></html>"))
+        self.label_8.setText(_translate("Form", "Notification"))

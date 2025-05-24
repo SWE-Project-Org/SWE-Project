@@ -15,7 +15,7 @@ class Ui_Form(object):
         Form.resize(412, 917)
         Form.setStyleSheet("background-color: #f4f4f4; border: 1px solid #000000;")
         self.label = QtWidgets.QLabel(parent=Form)
-        self.label.setGeometry(QtCore.QRect(60, 60, 281, 71))
+        self.label.setGeometry(QtCore.QRect(50, 60, 311, 71))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -32,30 +32,6 @@ class Ui_Form(object):
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setWordWrap(True)
         self.label.setObjectName("label")
-        self.textBrowser = QtWidgets.QTextBrowser(parent=Form)
-        self.textBrowser.setGeometry(QtCore.QRect(60, 150, 281, 41))
-        self.textBrowser.setStyleSheet("color: ffffff;background-color: #00000000;\n"
-"border-radius: 6px;\n"
-"    padding: 5px;")
-        self.textBrowser.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.textBrowser.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.textBrowser.setObjectName("textBrowser")
-        self.textBrowser_2 = QtWidgets.QTextBrowser(parent=Form)
-        self.textBrowser_2.setGeometry(QtCore.QRect(60, 200, 281, 41))
-        self.textBrowser_2.setStyleSheet("color: ffffff;background-color: #00000000;\n"
-"border-radius: 6px;\n"
-"    padding: 5px;")
-        self.textBrowser_2.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.textBrowser_2.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.textBrowser_2.setObjectName("textBrowser_2")
-        self.textBrowser_3 = QtWidgets.QTextBrowser(parent=Form)
-        self.textBrowser_3.setGeometry(QtCore.QRect(60, 250, 281, 41))
-        self.textBrowser_3.setStyleSheet("color: ffffff;background-color: #00000000;\n"
-"border-radius: 6px;\n"
-"    padding: 5px;")
-        self.textBrowser_3.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.textBrowser_3.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.textBrowser_3.setObjectName("textBrowser_3")
         self.label_2 = QtWidgets.QLabel(parent=Form)
         self.label_2.setGeometry(QtCore.QRect(60, 300, 281, 71))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Preferred)
@@ -96,6 +72,63 @@ class Ui_Form(object):
 "border-radius: 6px;\n"
 "    padding: 5px;")
         self.pushButton_10.setObjectName("pushButton_10")
+        self.tableWidget = QtWidgets.QTableWidget(parent=Form)
+        self.tableWidget.setGeometry(QtCore.QRect(80, 400, 241, 331))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Fixed, QtWidgets.QSizePolicy.Policy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.tableWidget.sizePolicy().hasHeightForWidth())
+        self.tableWidget.setSizePolicy(sizePolicy)
+        self.tableWidget.setStyleSheet("border: 0;\n"
+"color: black;")
+        self.tableWidget.setSizeAdjustPolicy(QtWidgets.QAbstractScrollArea.SizeAdjustPolicy.AdjustToContents)
+        self.tableWidget.setEditTriggers(QtWidgets.QAbstractItemView.EditTrigger.NoEditTriggers)
+        self.tableWidget.setProperty("showDropIndicator", True)
+        self.tableWidget.setShowGrid(False)
+        self.tableWidget.setObjectName("tableWidget")
+        self.tableWidget.setColumnCount(2)
+        self.tableWidget.setRowCount(1)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setVerticalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setItem(0, 0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tableWidget.setItem(0, 1, item)
+        self.tableWidget.horizontalHeader().setVisible(True)
+        self.tableWidget.horizontalHeader().setHighlightSections(True)
+        self.tableWidget.verticalHeader().setVisible(True)
+        self.tableWidget.verticalHeader().setHighlightSections(True)
+        self.label_4 = QtWidgets.QLabel(parent=Form)
+        self.label_4.setGeometry(QtCore.QRect(60, 140, 281, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_4.setFont(font)
+        self.label_4.setStyleSheet("color: ffffff;background-color: #00000000;\n"
+"border-radius: 6px;\n"
+"    padding: 5px;")
+        self.label_4.setObjectName("label_4")
+        self.label_5 = QtWidgets.QLabel(parent=Form)
+        self.label_5.setGeometry(QtCore.QRect(60, 190, 281, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_5.setFont(font)
+        self.label_5.setStyleSheet("color: ffffff;background-color: #00000000;\n"
+"border-radius: 6px;\n"
+"    padding: 5px;")
+        self.label_5.setObjectName("label_5")
+        self.label_6 = QtWidgets.QLabel(parent=Form)
+        self.label_6.setGeometry(QtCore.QRect(60, 240, 281, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_6.setFont(font)
+        self.label_6.setStyleSheet("color: ffffff;background-color: #00000000;\n"
+"border-radius: 6px;\n"
+"    padding: 5px;")
+        self.label_6.setObjectName("label_6")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -103,31 +136,23 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.label.setText(_translate("Form", "DAILY CHALLENGE"))
-        self.textBrowser.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:\'Noto Sans\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:13pt;\">Breakfast: </span><span style=\" font-family:\'FreeSans\'; font-size:13pt; font-weight:700;\">Cereal with milk</span></p></body></html>"))
-        self.textBrowser_2.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:\'Noto Sans\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:13pt;\">Lunch: </span><span style=\" font-family:\'FreeSans\'; font-size:13pt; font-weight:700;\">Cereal with milk</span></p></body></html>"))
-        self.textBrowser_3.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:\'Noto Sans\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:13pt;\">Dinner: </span><span style=\" font-family:\'FreeSans\'; font-size:13pt; font-weight:700;\">Cereal with milk</span></p></body></html>"))
+        self.label.setText(_translate("Form", "FOOD PLAN SUMMARY"))
         self.label_2.setText(_translate("Form", "GROCERY LIST"))
         self.pushButton_9.setText(_translate("Form", "Export to PDF"))
         self.pushButton_10.setText(_translate("Form", "Main Menu"))
+        item = self.tableWidget.verticalHeaderItem(0)
+        item.setText(_translate("Form", "Food"))
+        item = self.tableWidget.horizontalHeaderItem(0)
+        item.setText(_translate("Form", "Quantity:"))
+        item = self.tableWidget.horizontalHeaderItem(1)
+        item.setText(_translate("Form", "Cost(€):"))
+        __sortingEnabled = self.tableWidget.isSortingEnabled()
+        self.tableWidget.setSortingEnabled(False)
+        item = self.tableWidget.item(0, 0)
+        item.setText(_translate("Form", "X"))
+        item = self.tableWidget.item(0, 1)
+        item.setText(_translate("Form", "X"))
+        self.tableWidget.setSortingEnabled(__sortingEnabled)
+        self.label_4.setText(_translate("Form", "Breakfast: Cereal with milk"))
+        self.label_5.setText(_translate("Form", "Lunch: Cereal with milk"))
+        self.label_6.setText(_translate("Form", "Dinner: Cereal with milk"))

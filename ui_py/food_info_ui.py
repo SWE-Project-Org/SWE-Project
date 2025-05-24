@@ -43,12 +43,134 @@ class Ui_Form(object):
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setWordWrap(True)
         self.label.setObjectName("label")
-        self.textBrowser = QtWidgets.QTextBrowser(parent=Form)
-        self.textBrowser.setGeometry(QtCore.QRect(80, 130, 256, 541))
-        self.textBrowser.setStyleSheet("color: black; border: 0;")
-        self.textBrowser.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.textBrowser.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.textBrowser.setObjectName("textBrowser")
+        self.label_6 = QtWidgets.QLabel(parent=Form)
+        self.label_6.setGeometry(QtCore.QRect(180, 130, 51, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_6.setFont(font)
+        self.label_6.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_6.setObjectName("label_6")
+        self.label_7 = QtWidgets.QLabel(parent=Form)
+        self.label_7.setGeometry(QtCore.QRect(180, 160, 61, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_7.setFont(font)
+        self.label_7.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_7.setObjectName("label_7")
+        self.label_8 = QtWidgets.QLabel(parent=Form)
+        self.label_8.setGeometry(QtCore.QRect(180, 190, 61, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_8.setFont(font)
+        self.label_8.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_8.setObjectName("label_8")
+        self.label_9 = QtWidgets.QLabel(parent=Form)
+        self.label_9.setGeometry(QtCore.QRect(180, 220, 101, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_9.setFont(font)
+        self.label_9.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_9.setObjectName("label_9")
+        self.label_10 = QtWidgets.QLabel(parent=Form)
+        self.label_10.setGeometry(QtCore.QRect(180, 250, 81, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_10.setFont(font)
+        self.label_10.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_10.setObjectName("label_10")
+        self.label_11 = QtWidgets.QLabel(parent=Form)
+        self.label_11.setGeometry(QtCore.QRect(180, 280, 101, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_11.setFont(font)
+        self.label_11.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_11.setObjectName("label_11")
+        self.label_12 = QtWidgets.QLabel(parent=Form)
+        self.label_12.setGeometry(QtCore.QRect(180, 340, 101, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_12.setFont(font)
+        self.label_12.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_12.setObjectName("label_12")
+        self.label_13 = QtWidgets.QLabel(parent=Form)
+        self.label_13.setGeometry(QtCore.QRect(180, 310, 61, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_13.setFont(font)
+        self.label_13.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_13.setObjectName("label_13")
+        self.label_14 = QtWidgets.QLabel(parent=Form)
+        self.label_14.setGeometry(QtCore.QRect(180, 410, 101, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_14.setFont(font)
+        self.label_14.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_14.setObjectName("label_14")
+        self.label_15 = QtWidgets.QLabel(parent=Form)
+        self.label_15.setGeometry(QtCore.QRect(180, 380, 61, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_15.setFont(font)
+        self.label_15.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_15.setObjectName("label_15")
+        self.label_16 = QtWidgets.QLabel(parent=Form)
+        self.label_16.setGeometry(QtCore.QRect(180, 480, 101, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_16.setFont(font)
+        self.label_16.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_16.setObjectName("label_16")
+        self.label_17 = QtWidgets.QLabel(parent=Form)
+        self.label_17.setGeometry(QtCore.QRect(180, 450, 61, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_17.setFont(font)
+        self.label_17.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_17.setObjectName("label_17")
+        self.label_18 = QtWidgets.QLabel(parent=Form)
+        self.label_18.setGeometry(QtCore.QRect(180, 550, 31, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_18.setFont(font)
+        self.label_18.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_18.setObjectName("label_18")
+        self.label_19 = QtWidgets.QLabel(parent=Form)
+        self.label_19.setGeometry(QtCore.QRect(180, 520, 141, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_19.setFont(font)
+        self.label_19.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_19.setObjectName("label_19")
+        self.label_20 = QtWidgets.QLabel(parent=Form)
+        self.label_20.setGeometry(QtCore.QRect(180, 610, 61, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_20.setFont(font)
+        self.label_20.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_20.setObjectName("label_20")
+        self.label_21 = QtWidgets.QLabel(parent=Form)
+        self.label_21.setGeometry(QtCore.QRect(180, 580, 61, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_21.setFont(font)
+        self.label_21.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_21.setObjectName("label_21")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -58,39 +180,19 @@ class Ui_Form(object):
         Form.setWindowTitle(_translate("Form", "Form"))
         self.pushButton_9.setText(_translate("Form", "Done"))
         self.label.setText(_translate("Form", "FOOD NUTRITION"))
-        self.textBrowser.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:\'Noto Sans\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">Food:</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">Chicken</span></p>\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'FreeSans\'; font-size:12pt;\"><br /></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">Calories:</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">239kcal/100g</span></p>\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'FreeSans\'; font-size:12pt;\"><br /></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">Proteins:</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">27g/100g</span></p>\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'FreeSans\'; font-size:12pt;\"><br /></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">Total Carbohydrates:</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">0g/100g</span></p>\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'FreeSans\'; font-size:12pt;\"><br /></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">Total Fat:</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">14g/100g</span></p>\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'FreeSans\'; font-size:12pt;\"><br /></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">Sodium:</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">82mg/100g</span></p>\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'FreeSans\'; font-size:12pt;\"><br /></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">Vitamins:</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">100mg/100g</span></p>\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'FreeSans\'; font-size:12pt;\"><br /></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">Fiber:</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">0g/100g</span></p>\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'FreeSans\'; font-size:12pt;\"><br /></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">Nutritional Rating:</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">4/5</span></p>\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'FreeSans\'; font-size:12pt;\"><br /></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">Average Price:</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">4.75/kg</span></p></body></html>"))
+        self.label_6.setText(_translate("Form", "Food:"))
+        self.label_7.setText(_translate("Form", "Chicken"))
+        self.label_8.setText(_translate("Form", "Calories:"))
+        self.label_9.setText(_translate("Form", "239kcal/100g"))
+        self.label_10.setText(_translate("Form", "Vitamins:"))
+        self.label_11.setText(_translate("Form", "5mg/100g"))
+        self.label_12.setText(_translate("Form", "0g/100g"))
+        self.label_13.setText(_translate("Form", "Carbs:"))
+        self.label_14.setText(_translate("Form", "30g/100g"))
+        self.label_15.setText(_translate("Form", "Protein:"))
+        self.label_16.setText(_translate("Form", "17g/100g"))
+        self.label_17.setText(_translate("Form", "Fat:"))
+        self.label_18.setText(_translate("Form", "4/5"))
+        self.label_19.setText(_translate("Form", "Nutritional Rating:"))
+        self.label_20.setText(_translate("Form", "4.75/kg"))
+        self.label_21.setText(_translate("Form", "Average Price:"))

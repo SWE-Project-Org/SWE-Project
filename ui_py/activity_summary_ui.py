@@ -43,10 +43,54 @@ class Ui_Form(object):
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setWordWrap(True)
         self.label.setObjectName("label")
-        self.textBrowser = QtWidgets.QTextBrowser(parent=Form)
-        self.textBrowser.setGeometry(QtCore.QRect(80, 140, 256, 171))
-        self.textBrowser.setStyleSheet("color: black; border: 0;")
-        self.textBrowser.setObjectName("textBrowser")
+        self.label_6 = QtWidgets.QLabel(parent=Form)
+        self.label_6.setGeometry(QtCore.QRect(160, 180, 111, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_6.setFont(font)
+        self.label_6.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_6.setObjectName("label_6")
+        self.label_7 = QtWidgets.QLabel(parent=Form)
+        self.label_7.setGeometry(QtCore.QRect(180, 210, 71, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_7.setFont(font)
+        self.label_7.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_7.setObjectName("label_7")
+        self.label_9 = QtWidgets.QLabel(parent=Form)
+        self.label_9.setGeometry(QtCore.QRect(180, 270, 61, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_9.setFont(font)
+        self.label_9.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_9.setObjectName("label_9")
+        self.label_8 = QtWidgets.QLabel(parent=Form)
+        self.label_8.setGeometry(QtCore.QRect(150, 240, 131, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_8.setFont(font)
+        self.label_8.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_8.setObjectName("label_8")
+        self.label_4 = QtWidgets.QLabel(parent=Form)
+        self.label_4.setGeometry(QtCore.QRect(180, 120, 61, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_4.setFont(font)
+        self.label_4.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_4.setObjectName("label_4")
+        self.label_5 = QtWidgets.QLabel(parent=Form)
+        self.label_5.setGeometry(QtCore.QRect(180, 150, 71, 41))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_5.setFont(font)
+        self.label_5.setStyleSheet("color: black;\n"
+"border: 0;")
+        self.label_5.setObjectName("label_5")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -56,18 +100,9 @@ class Ui_Form(object):
         Form.setWindowTitle(_translate("Form", "Form"))
         self.pushButton_9.setText(_translate("Form", "Done"))
         self.label.setText(_translate("Form", "MONITORING ACTIVITY"))
-        self.textBrowser.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:\'Noto Sans\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">Activity:</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">Running</span></p>\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'FreeSans\'; font-size:12pt;\"><br /></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">Time Elapsed:</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">00:27:32</span></p>\n"
-"<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:\'FreeSans\'; font-size:12pt;\"><br /></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">Calories Burned:</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:12pt;\">187kcal</span></p></body></html>"))
+        self.label_6.setText(_translate("Form", "Time Elapsed:"))
+        self.label_7.setText(_translate("Form", "00:27:32"))
+        self.label_9.setText(_translate("Form", "243kcal"))
+        self.label_8.setText(_translate("Form", "Calories Burned:"))
+        self.label_4.setText(_translate("Form", "Activity:"))
+        self.label_5.setText(_translate("Form", "Running"))

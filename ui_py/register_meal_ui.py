@@ -14,8 +14,29 @@ class Ui_Form(object):
         Form.setObjectName("Form")
         Form.resize(412, 917)
         Form.setStyleSheet("background-color: #f4f4f4; border: 1px solid ")
+        self.pushButton_5 = QtWidgets.QPushButton(parent=Form)
+        self.pushButton_5.setGeometry(QtCore.QRect(40, 700, 331, 59))
+        font = QtGui.QFont()
+        font.setFamily("FreeSans")
+        font.setPointSize(13)
+        font.setBold(False)
+        self.pushButton_5.setFont(font)
+        self.pushButton_5.setStyleSheet("color: ffffff;background-color: #00000000;\n"
+"border-radius: 6px;\n"
+"    padding: 5px;")
+        self.pushButton_5.setObjectName("pushButton_5")
+        self.pushButton_11 = QtWidgets.QPushButton(parent=Form)
+        self.pushButton_11.setGeometry(QtCore.QRect(20, 60, 41, 41))
+        font = QtGui.QFont()
+        font.setFamily("FreeSans")
+        font.setPointSize(13)
+        font.setBold(False)
+        self.pushButton_11.setFont(font)
+        self.pushButton_11.setStyleSheet("color: ffffff;background-color: #00000000;\n"
+"border: 0;")
+        self.pushButton_11.setObjectName("pushButton_11")
         self.label = QtWidgets.QLabel(parent=Form)
-        self.label.setGeometry(QtCore.QRect(80, 70, 281, 71))
+        self.label.setGeometry(QtCore.QRect(70, 50, 311, 71))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Policy.Preferred, QtWidgets.QSizePolicy.Policy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -32,29 +53,18 @@ class Ui_Form(object):
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setWordWrap(True)
         self.label.setObjectName("label")
-        self.pushButton_11 = QtWidgets.QPushButton(parent=Form)
-        self.pushButton_11.setGeometry(QtCore.QRect(40, 80, 41, 41))
+        self.label_4 = QtWidgets.QLabel(parent=Form)
+        self.label_4.setGeometry(QtCore.QRect(40, 800, 331, 61))
         font = QtGui.QFont()
-        font.setFamily("FreeSans")
-        font.setPointSize(13)
-        font.setBold(False)
-        self.pushButton_11.setFont(font)
-        self.pushButton_11.setStyleSheet("color: ffffff;background-color: #00000000;\n"
-"border: 0;")
-        self.pushButton_11.setObjectName("pushButton_11")
-        self.pushButton_5 = QtWidgets.QPushButton(parent=Form)
-        self.pushButton_5.setGeometry(QtCore.QRect(20, 620, 370, 59))
-        font = QtGui.QFont()
-        font.setFamily("FreeSans")
-        font.setPointSize(13)
-        font.setBold(False)
-        self.pushButton_5.setFont(font)
-        self.pushButton_5.setStyleSheet("color: ffffff;background-color: #00000000;\n"
+        font.setPointSize(12)
+        self.label_4.setFont(font)
+        self.label_4.setStyleSheet("color: ffffff;background-color: #00000000;\n"
 "border-radius: 6px;\n"
 "    padding: 5px;")
-        self.pushButton_5.setObjectName("pushButton_5")
+        self.label_4.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_4.setObjectName("label_4")
         self.lineEdit_2 = QtWidgets.QLineEdit(parent=Form)
-        self.lineEdit_2.setGeometry(QtCore.QRect(20, 180, 370, 59))
+        self.lineEdit_2.setGeometry(QtCore.QRect(20, 140, 370, 59))
         font = QtGui.QFont()
         font.setFamily("FreeSans")
         font.setPointSize(13)
@@ -71,14 +81,28 @@ class Ui_Form(object):
 "}")
         self.lineEdit_2.setText("")
         self.lineEdit_2.setObjectName("lineEdit_2")
-        self.textBrowser = QtWidgets.QTextBrowser(parent=Form)
-        self.textBrowser.setGeometry(QtCore.QRect(60, 730, 281, 61))
-        self.textBrowser.setStyleSheet("color: ffffff;background-color: #00000000;\n"
+        self.radioButton = QtWidgets.QRadioButton(parent=Form)
+        self.radioButton.setGeometry(QtCore.QRect(30, 240, 361, 51))
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        self.radioButton.setFont(font)
+        self.radioButton.setStyleSheet("color: ffffff;background-color: #00000000;\n"
 "border-radius: 6px;\n"
 "    padding: 5px;")
-        self.textBrowser.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.textBrowser.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.textBrowser.setObjectName("textBrowser")
+        self.radioButton.setObjectName("radioButton")
+        self.buttonGroup = QtWidgets.QButtonGroup(Form)
+        self.buttonGroup.setObjectName("buttonGroup")
+        self.buttonGroup.addButton(self.radioButton)
+        self.radioButton_2 = QtWidgets.QRadioButton(parent=Form)
+        self.radioButton_2.setGeometry(QtCore.QRect(30, 300, 361, 51))
+        font = QtGui.QFont()
+        font.setPointSize(13)
+        self.radioButton_2.setFont(font)
+        self.radioButton_2.setStyleSheet("color: ffffff;background-color: #00000000;\n"
+"border-radius: 6px;\n"
+"    padding: 5px;")
+        self.radioButton_2.setObjectName("radioButton_2")
+        self.buttonGroup.addButton(self.radioButton_2)
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -86,16 +110,11 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.label.setText(_translate("Form", "REGISTER MEAL"))
-        self.pushButton_11.setText(_translate("Form", "<"))
         self.pushButton_5.setText(_translate("Form", "Add selected item to calorie intake"))
+        self.pushButton_11.setText(_translate("Form", "<"))
+        self.label.setText(_translate("Form", "REGISTER MEAL"))
+        self.label_4.setText(_translate("Form", "Calories consumed today: \n"
+"500"))
         self.lineEdit_2.setPlaceholderText(_translate("Form", "Search for Food:"))
-        self.textBrowser.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:\'Noto Sans\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:13pt;\">Calories consumed today:</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:13pt;\">500</span></p></body></html>"))
+        self.radioButton.setText(_translate("Form", "X(X kcal)"))
+        self.radioButton_2.setText(_translate("Form", "X(X kcal)"))

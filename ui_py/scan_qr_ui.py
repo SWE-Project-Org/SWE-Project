@@ -65,30 +65,6 @@ class Ui_Form(object):
         self.label_2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_2.setWordWrap(True)
         self.label_2.setObjectName("label_2")
-        self.textBrowser = QtWidgets.QTextBrowser(parent=Form)
-        self.textBrowser.setGeometry(QtCore.QRect(20, 688, 370, 59))
-        self.textBrowser.setStyleSheet("color: ffffff;background-color: #00000000;\n"
-"border-radius: 6px;\n"
-"    padding: 5px;")
-        self.textBrowser.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.textBrowser.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.textBrowser.setObjectName("textBrowser")
-        self.textBrowser_2 = QtWidgets.QTextBrowser(parent=Form)
-        self.textBrowser_2.setGeometry(QtCore.QRect(20, 750, 370, 59))
-        self.textBrowser_2.setStyleSheet("color: ffffff;background-color: #00000000;\n"
-"border-radius: 6px;\n"
-"    padding: 5px;")
-        self.textBrowser_2.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.textBrowser_2.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.textBrowser_2.setObjectName("textBrowser_2")
-        self.textBrowser_3 = QtWidgets.QTextBrowser(parent=Form)
-        self.textBrowser_3.setGeometry(QtCore.QRect(20, 820, 370, 59))
-        self.textBrowser_3.setStyleSheet("color: ffffff;background-color: #00000000;\n"
-"border-radius: 6px;\n"
-"    padding: 5px;")
-        self.textBrowser_3.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.textBrowser_3.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.textBrowser_3.setObjectName("textBrowser_3")
         self.pushButton_5 = QtWidgets.QPushButton(parent=Form)
         self.pushButton_5.setGeometry(QtCore.QRect(110, 480, 190, 59))
         font = QtGui.QFont()
@@ -100,6 +76,39 @@ class Ui_Form(object):
 "border-radius: 6px;\n"
 "    padding: 5px;")
         self.pushButton_5.setObjectName("pushButton_5")
+        self.label_4 = QtWidgets.QLabel(parent=Form)
+        self.label_4.setGeometry(QtCore.QRect(20, 690, 371, 51))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_4.setFont(font)
+        self.label_4.setStyleSheet("color: ffffff;background-color: #00000000;\n"
+"border-radius: 6px;\n"
+"    padding: 5px;")
+        self.label_4.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_4.setWordWrap(True)
+        self.label_4.setObjectName("label_4")
+        self.label_5 = QtWidgets.QLabel(parent=Form)
+        self.label_5.setGeometry(QtCore.QRect(20, 750, 371, 51))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_5.setFont(font)
+        self.label_5.setStyleSheet("color: ffffff;background-color: #00000000;\n"
+"border-radius: 6px;\n"
+"    padding: 5px;")
+        self.label_5.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_5.setWordWrap(True)
+        self.label_5.setObjectName("label_5")
+        self.label_6 = QtWidgets.QLabel(parent=Form)
+        self.label_6.setGeometry(QtCore.QRect(20, 810, 371, 51))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_6.setFont(font)
+        self.label_6.setStyleSheet("color: ffffff;background-color: #00000000;\n"
+"border-radius: 6px;\n"
+"    padding: 5px;")
+        self.label_6.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_6.setWordWrap(True)
+        self.label_6.setObjectName("label_6")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -110,31 +119,10 @@ class Ui_Form(object):
         self.label.setText(_translate("Form", "SCAN FOOD QR CODE"))
         self.pushButton_11.setText(_translate("Form", "<"))
         self.label_2.setText(_translate("Form", "RECENTLY SCANNED"))
-        self.textBrowser.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:\'Noto Sans\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:13pt;\">Chicken </span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:13pt;\">239kcal/100g</span></p></body></html>"))
-        self.textBrowser_2.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:\'Noto Sans\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:13pt;\">Chicken </span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:13pt;\">239kcal/100g</span></p></body></html>"))
-        self.textBrowser_3.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:\'Noto Sans\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:13pt;\">Chicken </span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:13pt;\">239kcal/100g</span></p></body></html>"))
         self.pushButton_5.setText(_translate("Form", "Scan QR Code"))
+        self.label_4.setText(_translate("Form", "Chicken\n"
+"239kcal/100g"))
+        self.label_5.setText(_translate("Form", "Chicken\n"
+"239kcal/100g"))
+        self.label_6.setText(_translate("Form", "Chicken\n"
+"239kcal/100g"))
