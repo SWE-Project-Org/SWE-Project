@@ -8,10 +8,13 @@ class ActivityMonitorScreen(QWidget):
         self.service = service
         self.ui.setupUi(self)
         self.ui.pushButton_9.clicked.connect(self.service_end_activity)
-        
+
     def service_end_activity(self):
         self.deleteLater()
         self.service.end_activity()
 
-    def update(self):
-        pass
+    def my_update(self, activity, time, cal, heartrate):
+        self.ui.label_5.setText(activity)
+        self.ui.label_7.setText(time)
+        self.ui.label_9.setText(cal)
+        self.ui.label_11.setText(heartrate)

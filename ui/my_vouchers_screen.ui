@@ -151,6 +151,98 @@ border-radius: 6px;
     <string>Masoutis/4$, XDHf24</string>
    </property>
   </widget>
+  <widget class="QLabel" name="label_9">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>300</y>
+     <width>371</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: ffffff;background-color: #00000000;
+border-radius: 6px;
+    padding: 5px;</string>
+   </property>
+   <property name="text">
+    <string>Masoutis/4$, XDHf24</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_10">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>360</y>
+     <width>371</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: ffffff;background-color: #00000000;
+border-radius: 6px;
+    padding: 5px;</string>
+   </property>
+   <property name="text">
+    <string>Masoutis/4$, XDHf24</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>420</y>
+     <width>371</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: ffffff;background-color: #00000000;
+border-radius: 6px;
+    padding: 5px;</string>
+   </property>
+   <property name="text">
+    <string>Masoutis/4$, XDHf24</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_12">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>480</y>
+     <width>371</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: ffffff;background-color: #00000000;
+border-radius: 6px;
+    padding: 5px;</string>
+   </property>
+   <property name="text">
+    <string>Masoutis/4$, XDHf24</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

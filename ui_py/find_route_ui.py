@@ -32,11 +32,6 @@ class Ui_Form(object):
 "}")
         self.lineEdit.setText("")
         self.lineEdit.setObjectName("lineEdit")
-        self.frame = QtWidgets.QFrame(parent=Form)
-        self.frame.setGeometry(QtCore.QRect(19, 101, 385, 385))
-        self.frame.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
-        self.frame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
-        self.frame.setObjectName("frame")
         self.comboBox = QtWidgets.QComboBox(parent=Form)
         self.comboBox.setGeometry(QtCore.QRect(26, 532, 370, 59))
         font = QtGui.QFont()
@@ -109,6 +104,11 @@ class Ui_Form(object):
 "border: 0;\n"
 "")
         self.pushButton_6.setObjectName("pushButton_6")
+        self.label_2 = QtWidgets.QLabel(parent=Form)
+        self.label_2.setGeometry(QtCore.QRect(10, 80, 391, 441))
+        self.label_2.setText("")
+        self.label_2.setPixmap(QtGui.QPixmap("ui/map.png"))
+        self.label_2.setObjectName("label_2")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)

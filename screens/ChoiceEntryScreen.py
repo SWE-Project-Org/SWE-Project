@@ -10,6 +10,7 @@ class ChoiceEntryScreen(QWidget):
         self.ui.setupUi(self)
         self.ui.pushButton_5.clicked.connect(self.return_choices_service)
         self.ui.pushButton_6.clicked.connect(self.show_main_menu_screen) 
+
     
     def show_main_menu_screen(self):
         self.deleteLater()
@@ -17,6 +18,9 @@ class ChoiceEntryScreen(QWidget):
 
     def return_choices_service(self):
         self.deleteLater()
-        self.service.returned_choice('running')
+        self.activity = self.ui.comboBox.currentText()
+        self.start = self.ui.lineEdit_2.text()
+        self.cal = int(self.ui.lineEdit.text())
+        self.service.returned_choice([self.activity, self.start, self.cal])
 
     

@@ -17,32 +17,40 @@ class MapService:
         self.choice_entry_screen.show()
 
     def returned_choice(self, choice):
-        self.choices = choice
-        self.estimate_distance()
-        self.check_realistic()
-        self.locations = self.get_locations()
-        self.routes = self.get_routes()
-        self.route_selection_screen = RouteSelectionScreen(self)
-        self.route_selection_screen.show()
+        if choice == None:
+            self.route_selection_screen = RouteSelectionScreen(self, self.routes)
+            self.route_selection_screen.show()
+        else:
+            self.choices = choice
+            distance = self.estimate_distance()
+            print(distance)
+            self.check_realistic(distance)
+            self.locations = self.get_locations()
+            self.routes = self.get_routes(distance)
+            self.route_selection_screen = RouteSelectionScreen(self, self.routes)
+            self.route_selection_screen.show()
 
-    def show_selected_route(self):
-        self.route_display_screen = RouteDisplayScreen(self)
+    def show_selected_route(self, selected_route):
+        self.route_display_screen = RouteDisplayScreen(self, selected_route)
         self.route_display_screen.show()
 
     def estimate_distance(self):
-        pass
+        return self.choices[2] / 60
 
-    def check_realistic(self):
-        pass
+    def check_realistic(self, distance):
+        if distance > 30:
+            print("unrealistic")
 
     def get_map(self):
         return Map()
 
     def get_locations(self):
-        return Location()
+        return ['b', 'c', 'd']
 
-    def get_routes(self):
-        return Route()
+    def get_routes(self, distance):
+        return [Route(self.choices[1], self.locations[0], int(distance*6), self.choices[2]), 
+                Route(self.choices[1], self.locations[1], int(distance*6), self.choices[2]), 
+                Route(self.choices[1], self.locations[2], int(distance*6), self.choices[2])]
 
     
 

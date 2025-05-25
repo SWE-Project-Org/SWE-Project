@@ -70,6 +70,42 @@ class Ui_Form(object):
 "border-radius: 6px;\n"
 "    padding: 5px;")
         self.label_8.setObjectName("label_8")
+        self.label_9 = QtWidgets.QLabel(parent=Form)
+        self.label_9.setGeometry(QtCore.QRect(20, 300, 371, 51))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_9.setFont(font)
+        self.label_9.setStyleSheet("color: ffffff;background-color: #00000000;\n"
+"border-radius: 6px;\n"
+"    padding: 5px;")
+        self.label_9.setObjectName("label_9")
+        self.label_10 = QtWidgets.QLabel(parent=Form)
+        self.label_10.setGeometry(QtCore.QRect(20, 360, 371, 51))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_10.setFont(font)
+        self.label_10.setStyleSheet("color: ffffff;background-color: #00000000;\n"
+"border-radius: 6px;\n"
+"    padding: 5px;")
+        self.label_10.setObjectName("label_10")
+        self.label_11 = QtWidgets.QLabel(parent=Form)
+        self.label_11.setGeometry(QtCore.QRect(20, 420, 371, 51))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_11.setFont(font)
+        self.label_11.setStyleSheet("color: ffffff;background-color: #00000000;\n"
+"border-radius: 6px;\n"
+"    padding: 5px;")
+        self.label_11.setObjectName("label_11")
+        self.label_12 = QtWidgets.QLabel(parent=Form)
+        self.label_12.setGeometry(QtCore.QRect(20, 480, 371, 51))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_12.setFont(font)
+        self.label_12.setStyleSheet("color: ffffff;background-color: #00000000;\n"
+"border-radius: 6px;\n"
+"    padding: 5px;")
+        self.label_12.setObjectName("label_12")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -82,3 +118,7 @@ class Ui_Form(object):
         self.label_6.setText(_translate("Form", "Masoutis/4$, XDHf24"))
         self.label_7.setText(_translate("Form", "Masoutis/4$, XDHf24"))
         self.label_8.setText(_translate("Form", "Masoutis/4$, XDHf24"))
+        self.label_9.setText(_translate("Form", "Masoutis/4$, XDHf24"))
+        self.label_10.setText(_translate("Form", "Masoutis/4$, XDHf24"))
+        self.label_11.setText(_translate("Form", "Masoutis/4$, XDHf24"))
+        self.label_12.setText(_translate("Form", "Masoutis/4$, XDHf24"))

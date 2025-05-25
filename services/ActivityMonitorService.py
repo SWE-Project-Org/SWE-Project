@@ -18,6 +18,7 @@ class ActivityMonitorService():
         self.activities = self.get_activities()
         self.activity_selection_screen = ActivitySelectionScreen(self)
         self.activity_selection_screen.show()
+        #self.activity_selection_screen.update(self.activity)
 
     def create_activity(self):
         self.activity = Activity()

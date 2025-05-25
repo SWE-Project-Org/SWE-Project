@@ -11,7 +11,7 @@ class WeeklyProgressScreen(QWidget):
         self.service = service
         self.ui.setupUi(self)
         self.ui.pushButton_11.clicked.connect(self.show_main_menu_screen)
-        self.ui.pushButton_5.clicked.connect(self.export_to_pdf_service)  
+        self.ui.pushButton_9.clicked.connect(self.export_to_pdf_service)  
  
     def show_main_menu_screen(self):
         self.deleteLater()
