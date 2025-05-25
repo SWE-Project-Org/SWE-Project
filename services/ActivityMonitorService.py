@@ -15,36 +15,39 @@ class ActivityMonitorService():
         self.activity = None
 
     def monitor_activity(self):
-        self.activities = self.get_activities()
-        self.activity_selection_screen = ActivitySelectionScreen(self)
+        activities = self.get_activities()
+        self.activity_selection_screen = ActivitySelectionScreen(self, activities)
         self.activity_selection_screen.show()
-        #self.activity_selection_screen.update(self.activity)
 
-    def create_activity(self):
-        self.activity = Activity()
-        self.timer = self.create_timer()
-        self.activity_monitor_screen = ActivityMonitorScreen(self)
+    def create_activity(self, activity_type, cal_per_hour):
+        self.activity = Activity(activity_type, cal_per_hour)
+        self.activity_monitor_screen = ActivityMonitorScreen(self, self.activity.type)
         self.activity_monitor_screen.show()
+        self.timer = self.create_timer()
         self.timer.start_timer()
+        self.timer.timeout.connect(self.update_activity_monitor_screen)
+        
+    def update_activity_monitor_screen(self):
         self.smartwatch_reading = self.smartwatch.get_smartwatch_reading()
-        self.current_calories_burned = self.calories_burned()
         self.current_time_elapsed = self.timer.time_elapsed()
-        self.update_activity_monitor_screen()
+        self.current_calories_burned = self.calories_burned(self.current_time_elapsed[1], self.activity.cal_per_hour)
+        self.activity_monitor_screen.update(self.smartwatch_reading, self.current_time_elapsed[0]
+                                            , self.current_calories_burned)
         
     def end_activity(self):
+        self.timer.stop()
         self.db.store_activity()
         self.db.update_calorie_counter()
-        self.activity_summary_screen = ActivitySummaryScreen(self)
+        self.activity_summary_screen = ActivitySummaryScreen(self, self.activity.type, 
+                                                             self.current_time_elapsed[0], 
+                                                             self.current_calories_burned)
         self.activity_summary_screen.show()
-    
-    def get_activities(self):
-        pass
-    
+
     def create_timer(self):
         return Timer()
     
-    def calories_burned(self):
-        pass
+    def calories_burned(self, seconds, cal_per_hour):
+        return str(seconds*cal_per_hour/3600)
     
-    def update_activity_monitor_screen(self):
-        self.activity_monitor_screen.update()
+    def get_activities(self):
+        return (self.db.get_activity_types())

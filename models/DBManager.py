@@ -1,9 +1,16 @@
 from models.Challenge import Challenge
+import sqlite3
 
 
 class DBManager:
     def __init__(self):
-         pass
+        self.conn = sqlite3.connect('database.db')
+        self.cursor = self.conn.cursor()
+        self.create_tables()
+        self.insert_activity_type()
+    
+
+
     def store_activity(self):
         pass
 
@@ -59,3 +66,38 @@ class DBManager:
     
     def storeIngredientList(self):
         pass
+
+    def insert_activity_type(self,):
+        self.cursor.execute('''
+            INSERT INTO ActivityType 
+            (name, calories_burned_per_hr)
+            VALUES (?, ?);
+        ''', ('Running', 600))
+        self.cursor.execute('''
+            INSERT INTO ActivityType 
+            (name, calories_burned_per_hr)
+            VALUES (?, ?);
+        ''', ('Walking', 300))
+        self.conn.commit()
+    
+    def get_activity_types(self):
+        self.cursor.execute('SELECT * FROM ActivityType;')
+        return self.cursor.fetchall()
+
+    def create_tables(self):
+        self.cursor.execute('DROP TABLE IF EXISTS ActivityType;')
+        self.cursor.execute('''
+            CREATE TABLE IF NOT EXISTS ActivityType (
+            id INTEGER PRIMARY KEY,
+            name TEXT NOT NULL,
+            calories_burned_per_hr INTEGER NOT NULL
+            );''')
+        self.cursor.execute('''
+            CREATE TABLE IF NOT EXISTS Activity (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        total_time INTEGER NOT NULL,
+        total_calories INTEGER NOT NULL,
+        avg_heartrate INTEGER,
+        activity_date DATE
+        );''')
+        self.conn.commit()

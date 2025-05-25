@@ -1,18 +1,20 @@
 import time
+from PyQt6.QtCore import QTimer
 
-
-class Timer():
+class Timer(QTimer):
     def __init__(self):
-        self.start_time = None
-        self.end_time = None
-        self.duration = 0
+        super().__init__()
+        self.seconds_elapsed = 0
 
     def start_timer(self):
-        self.start_time = time.time()
+        self.start(1000)
 
     def time_elapsed(self):
-        self.end_time = time.time()
-        self.duration = self.end_time - self.start_time
-        return self.duration
+        self.seconds_elapsed += 1
+        hours = self.seconds_elapsed // 3600
+        minutes = (self.seconds_elapsed % 3600) // 60
+        seconds = self.seconds_elapsed % 60
+        time_str = f"{hours:02d}:{minutes:02d}:{seconds:02d}"
+        return [ time_str, seconds ]
 
 
