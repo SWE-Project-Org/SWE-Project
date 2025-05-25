@@ -21,7 +21,9 @@ CREATE TABLE IF NOT EXISTS User (
 
 CREATE TABLE IF NOT EXISTS CouponCodes (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    code TEXT NOT NULL
+    code TEXT NOT NULL,
+    description TEXT,
+    validTill DATE
 );
 
 CREATE TABLE IF NOT EXISTS Food (
@@ -85,7 +87,10 @@ CREATE TABLE IF NOT EXISTS Challenge (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     completed BOOLEAN NOT NULL,
     date_of_challenge DATE,
-    difficulty TEXT CHECK( difficulty in ('Easy', 'Medium', 'Hard'))
+    difficulty TEXT CHECK( difficulty in ('Easy', 'Medium', 'Hard')),
+    calories INT,
+    duration INT,
+    description TEXT
 );
 
 CREATE TABLE IF NOT EXISTS DailyCalorieHistory (
