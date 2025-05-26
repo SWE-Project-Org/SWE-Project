@@ -15,7 +15,7 @@ class ActivityMonitorService():
         self.activity = None
 
     def monitor_activity(self):
-        activities = self.get_activities()
+        activities = self.db.get_activities()
         self.activity_selection_screen = ActivitySelectionScreen(self, activities)
         self.activity_selection_screen.show()
 
@@ -36,7 +36,8 @@ class ActivityMonitorService():
         
     def end_activity(self):
         self.timer.stop()
-        self.db.store_activity()
+        self.db.store_activity(self.current_time_elapsed[0], self.current_calories_burned, 
+                               self.smartwatch_reading)
         self.db.update_calorie_counter()
         self.activity_summary_screen = ActivitySummaryScreen(self, self.activity.type, 
                                                              self.current_time_elapsed[0], 
@@ -47,7 +48,6 @@ class ActivityMonitorService():
         return Timer()
     
     def calories_burned(self, seconds, cal_per_hour):
-        return str(seconds*cal_per_hour/3600)
+        return str(int(seconds*cal_per_hour/3600))
     
-    def get_activities(self):
-        return (self.db.get_activity_types())
+    

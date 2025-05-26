@@ -3,14 +3,17 @@ from ui_py import (main_menu_ui)
 
 from instanciation import register_meal_service,weekly_progress_service,map_service
 from instanciation import food_planner_service,activity_monitor_service,reward_service,challenge_service,image_upload_service, food_information_service
-
+from instanciation import db
 
 class MainMenuScreen(QMainWindow):
     def __init__(self):
         super().__init__()
         self.ui = main_menu_ui.Ui_MainWindow()  
         self.ui.setupUi(self) 
-        # buttons from the main screen
+        self.ui.label_5.setText(str(db.get_consumed_calories())) #consumed
+        self.ui.label_6.setText(str(db.get_burned_calories())) #burned
+        self.ui.label_7.setText(str(db.get_daily_limit())) #goal
+        self.ui.label_8.setText(str(db.get_calorie_counter())) #goal
         self.ui.pushButton_8.clicked.connect(self.on_click_monitor_activity_btn)
         self.ui.pushButton_7.clicked.connect(self.on_click_redeem_points_btn)
         self.ui.pushButton_2.clicked.connect(self.on_click_route_btn)
@@ -46,7 +49,6 @@ class MainMenuScreen(QMainWindow):
     def on_click_create_food_plan_btn(self):
         self.deleteLater()
         self.food_plan_obj.createFoodPlanService()
-
     
     def on_click_monitor_activity_btn(self):
         self.deleteLater()
@@ -63,3 +65,5 @@ class MainMenuScreen(QMainWindow):
     def on_click_redeem_points_btn(self):
         self.deleteLater()
         self.reward_service.get_offers()
+
+

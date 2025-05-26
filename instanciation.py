@@ -13,6 +13,8 @@ from models.Camera import Camera
 from models.DBManager import  DBManager
 
 db = DBManager()
+
+
 smartwatch = SmartWatch() # smartwatch API service
 supermarket = Supermarket() # supermarket API service
 camera = Camera()

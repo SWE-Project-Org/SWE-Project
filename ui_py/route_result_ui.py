@@ -89,6 +89,11 @@ class Ui_Form(object):
         self.label_2.setText("")
         self.label_2.setPixmap(QtGui.QPixmap("ui/route.png"))
         self.label_2.setObjectName("label_2")
+        self.label_3 = QtWidgets.QLabel(parent=Form)
+        self.label_3.setGeometry(QtCore.QRect(230, 350, 391, 441))
+        self.label_3.setText("")
+        self.label_3.setPixmap(QtGui.QPixmap("ui/route.png"))
+        self.label_3.setObjectName("label_3")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)

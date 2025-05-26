@@ -1,23 +1,13 @@
 DROP TABLE IF EXISTS DailyCalorieHistory;
 DROP TABLE IF EXISTS Challenge;
 DROP TABLE IF EXISTS RecentlyScannedFood;
-DROP TABLE IF EXISTS ActivityType;
-DROP TABLE IF EXISTS Activity;
 DROP TABLE IF EXISTS IngredientAllergies;
 DROP TABLE IF EXISTS Allergy;
 DROP TABLE IF EXISTS Ingredient;
 DROP TABLE IF EXISTS FoodIngredient;
 DROP TABLE IF EXISTS Food;
 DROP TABLE IF EXISTS CouponCodes;
-DROP TABLE IF EXISTS User;
 
-CREATE TABLE IF NOT EXISTS User (
-    id INTEGER PRIMARY KEY AUTOINCREMENT, 
-    daily_calories INTEGER,
-    points INTEGER,
-    daily_limit INTEGER
-
-);
 
 CREATE TABLE IF NOT EXISTS CouponCodes (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -63,20 +53,6 @@ CREATE TABLE IF NOT EXISTS  IngredientAllergies (
     FOREIGN KEY (allergy_id) REFERENCES Allergy (id)
 );
 
-CREATE TABLE IF NOT EXISTS Activity (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    total_time INTEGER NOT NULL,
-    total_calories INTEGER NOT NULL,
-    avg_heartrate INTEGER,
-    activity_date DATE
-);
-
-CREATE TABLE IF NOT EXISTS ActivityType (
-    id INTEGER PRIMARY KEY,
-    name TEXT NOT NULL,
-    calories_burned_per_hr INTEGER NOT NULL
-);
-
 CREATE TABLE IF NOT EXISTS RecentlyScannedFood (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     calories_per_100g INTEGER NOT NULL,
@@ -98,20 +74,6 @@ CREATE TABLE IF NOT EXISTS DailyCalorieHistory (
     date DATE NOT NULL,
     calories INTEGER NOT NULL
 );
-------------------------------------------------------------------
-
-INSERT INTO User (daily_calories, points, daily_limit) 
-VALUES (2000, 100, 2500);
-
-/* return ActivityType */
-SELECT name,calories_burned_per_hr 
-FROM ActivityType;
-
-/* store Activity */
-INSERT INTO Activity (total_time, total_calories, avg_heartrate, activity_date) 
-VALUES (30, 300, 140, DATE('now'));
-
-/* removed activitycompleted, added date to activity */
 
 /* Update daily_calories */
 SELECT daily_calories FROM User;
@@ -209,3 +171,65 @@ INSERT INTO DailyCalorieHistory (date, calories)
 VALUES (DATE('now', '-1 days'), (SELECT daily_calories FROM User));
 
 UPDATE User SET daily_calories = 0;
+
+
+
+
+/* Implemented section:
+
+DROP TABLE IF EXISTS User;
+DROP TABLE IF EXISTS ActivityType;
+DROP TABLE IF EXISTS Activity;
+
+INSERT INTO User (daily_calories, points, daily_limit) 
+VALUES (2000, 100, 2500);
+
+
+/* return ActivityType 
+SELECT name,calories_burned_per_hr 
+FROM ActivityType;
+*/
+
+
+/* store Activity 
+INSERT INTO Activity (total_time, total_calories, avg_heartrate, activity_date) 
+VALUES (30, 300, 140, DATE('now'));
+
+/* removed activitycompleted, added date to activity */
+
+*/
+
+/*
+
+CREATE TABLE IF NOT EXISTS Activity (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    total_time INTEGER NOT NULL,
+    total_calories INTEGER NOT NULL,
+    avg_heartrate INTEGER,
+    activity_date DATE
+);
+
+*/
+
+/*
+
+/*
+CREATE TABLE IF NOT EXISTS User (
+    id INTEGER PRIMARY KEY AUTOINCREMENT, 
+    daily_calories INTEGER,
+    points INTEGER,
+    daily_limit INTEGER
+
+);
+
+*/
+
+CREATE TABLE IF NOT EXISTS ActivityType (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    calories_burned_per_hr INTEGER NOT NULL
+);
+
+*/
+
+
