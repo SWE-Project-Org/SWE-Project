@@ -1,7 +1,6 @@
 from models.Challenge import Challenge
 import sqlite3
 
-
 class DBManager:
     def __init__(self):
         self.conn = sqlite3.connect('database.db')

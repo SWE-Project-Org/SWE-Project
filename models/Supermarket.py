@@ -6,7 +6,10 @@ class Supermarket:
         pass
 
     def get_food_list(self):
-        return list()
+        return [('Chicken with potatoes', 830), 
+                ('Beef Stew', 300), 
+                ('Cheesecake', 321),
+                ('Greek Salad', 150)]
     
     def fetch_prices(self):
         return 'prices'

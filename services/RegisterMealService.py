@@ -11,7 +11,9 @@ class RegisterMealService:
         self.registered_food = None
 
     def register_food(self):
-        self.resiger_meal_screen = RegisterMealScreen(self)
+        food_list = self.supermarket.get_food_list()
+
+        self.resiger_meal_screen = RegisterMealScreen(self, food_list)
         self.resiger_meal_screen.show()
 
     def create_registered_food(self):
