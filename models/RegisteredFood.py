@@ -1,4 +1,3 @@
 class RegisteredFood:
-    def __init__(self, name: str, calories: int):
-        self.name = name
+    def __init__(self, calories: int):
         self.calories = calories

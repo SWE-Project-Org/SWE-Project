@@ -12,18 +12,15 @@ class RegisterMealService:
 
     def register_food(self):
         food_list = self.supermarket.get_food_list()
-
         self.resiger_meal_screen = RegisterMealScreen(self, food_list)
         self.resiger_meal_screen.show()
 
-    def create_registered_food(self):
-        self.registered_food = RegisteredFood()
+    def create_registered_food(self, calories):
+        self.registered_food = RegisteredFood(calories)
         exceeded = self.db.update_calorie_counter()
-        self.store_food()
+        self.db.store_food(self.registered_food.calories)
         self.register_food()
 
-    def store_food():
-        pass
 
 
 

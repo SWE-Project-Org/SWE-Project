@@ -137,8 +137,7 @@ class DBManager:
         self.conn.commit()
 
     def get_calorie_counter(self):
-        self.cursor.execute('SELECT daily_calories FROM User;')
-        return self.cursor.fetchone()[0]
+        return self.get_consumed_calories() - self.get_burned_calories()
     
     def get_daily_limit(self):
         self.cursor.execute('SELECT daily_limit FROM User;')
@@ -151,4 +150,11 @@ class DBManager:
     def get_consumed_calories(self):
         self.cursor.execute('SELECT SUM(calories) FROM RegisteredFood;')
         return self.cursor.fetchone()[0] or 0
+    
+    def store_food(self, calories):
+        self.cursor.execute('''
+            INSERT INTO RegisteredFood (calories)
+            VALUES (?);
+        ''', (calories,))
+        self.conn.commit()
         
