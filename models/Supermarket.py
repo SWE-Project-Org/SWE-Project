@@ -20,19 +20,19 @@ class Supermarket:
             points=100,
             description="Masoutis",
             validTill=datetime.datetime.now() + datetime.timedelta(days=30),
-            redeemLimit=5
+            redeemLimit=1
             ),
             Offer(
             points=200,
             description="Sklavenitis",
             validTill=datetime.datetime.now() + datetime.timedelta(days=60),
-            redeemLimit=2
+            redeemLimit=1
             ),
             Offer(
             points=50,
             description="MyMarket",
             validTill=datetime.datetime.now() + datetime.timedelta(days=15),
-            redeemLimit=10
+            redeemLimit=1
             ),
             Offer(
             points=500,

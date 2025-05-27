@@ -22,7 +22,7 @@ class RewardService:
             if len(offers) <= 0:
                 raise ValueError("No offers found")
 
-            self.rScreen = RedeemPointsScreen(self)
+            self.rScreen = RedeemPointsScreen(self, offers)
             self.rScreen.show()
 
         except Exception as e:
@@ -71,13 +71,18 @@ class RewardService:
             self.nScreen.show()
 
         
-    def check_if_offer_valid(self,offer: Offer):
-        pass
+    def check_if_offer_valid(self, offer: Offer):
+        # If validTill is a datetime object, compare directly
+        now = datetime.datetime.now()
+        valid_till = offer.validTill
+        if isinstance(valid_till, str):
+            try:
+                valid_till = datetime.datetime.fromisoformat(valid_till)
+            except Exception:
+                raise ValueError("Offer expiry date format invalid")
+        if now > valid_till:
+            raise ValueError("This offer has expired.")
 
-    def compare_redeem_limit(self,offer: Offer,times):
-        pass
-
-
-    def reward_points_to_user(self,points:int) ->int:
-        pass
-
+    def compare_redeem_limit(self, offer: Offer, times):
+        if times > offer.redeemLimit:
+            raise ValueError(f"Cannot redeem more than {offer.redeemLimit} times for this offer.")

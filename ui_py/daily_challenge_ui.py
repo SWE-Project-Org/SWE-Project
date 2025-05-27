@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'ui/daily_challenge_screen.ui'
+# Form implementation generated from reading ui file 'daily_challenge_screen.ui'
 #
 # Created by: PyQt6 UI code generator 6.9.0
 #
@@ -101,6 +101,15 @@ class Ui_Form(object):
         self.label_7.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label_7.setWordWrap(True)
         self.label_7.setObjectName("label_7")
+        self.label_timer = QtWidgets.QLabel(parent=Form)
+        self.label_timer.setGeometry(QtCore.QRect(100, 450, 211, 61))
+        font = QtGui.QFont()
+        font.setPointSize(20)
+        font.setBold(True)
+        self.label_timer.setFont(font)
+        self.label_timer.setStyleSheet("color: #e91e63; border: none; text-align: center;")
+        self.label_timer.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_timer.setObjectName("label_timer")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -116,3 +125,4 @@ class Ui_Form(object):
         self.label_5.setText(_translate("Form", "You will burn:"))
         self.label_6.setText(_translate("Form", "400 calories"))
         self.label_7.setText(_translate("Form", "This is a Medium Challenge"))
+        self.label_timer.setText(_translate("Form", "00:00:00"))

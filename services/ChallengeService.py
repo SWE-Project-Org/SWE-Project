@@ -24,18 +24,23 @@ class ChallengeService:
             calories = challenge.get_calories()
             timer = self.create_timer()
             timer.start_timer()
-            self.dScreen = DailyChallengeScreen(self)
+            self.dScreen = DailyChallengeScreen(self, challenge, timer)
             self.dScreen.show()
 
         except Exception as e:
             error_message = f":{str(e)}"
             print(error_message)
+
+            self.menu = main_menu.MainMenuScreen()
+            self.menu.show()
+
             self.nScreen = NotificationScreen(error_message,self)
             self.nScreen.show()
 
     # when the user clicks "Done" in the DailyChallengeScreen
     def challenge_completed(self) -> None:
-        self.reward_service.reward_points_to_user(100)
+        self.current_challenge.completed = True  # Mark the challenge as completed
+        self.db.reward_points_to_user(100)
         self.db.save_challenge(self.current_challenge)
         self.current_challenge = None
         self.current_timer = None
@@ -59,7 +64,6 @@ class ChallengeService:
 
 
     def is_daily_completed(self) -> bool:
-        # return False
         return self.db.is_daily_challenge_completed()
 
     def create_challenge(self) -> Challenge:
@@ -73,3 +77,5 @@ class ChallengeService:
     
     def start_timer(self, timer):
         timer.start_timer()
+
+        
