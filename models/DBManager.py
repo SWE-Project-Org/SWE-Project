@@ -2,6 +2,8 @@ from models.Challenge import Challenge
 import sqlite3
 import datetime
 
+from models.CouponCode import CouponCode
+
 class DBManager:
     def __init__(self):
         self.conn = sqlite3.connect('database.db')
@@ -29,21 +31,39 @@ class DBManager:
         self.conn.commit()
 
     def get_user_points(self) -> int:
-        pass
+        self.cursor.execute('SELECT points FROM User LIMIT 1;')
+        result = self.cursor.fetchone()
+        if result is not None:
+            return result[0]
+        return 0
 
     # returns balance
-    def subtract_user_points(self) -> int:
-        pass
+    def subtract_user_points(self, amount: int) -> int:
+        user_points = self.get_user_points()
+        new_points = user_points - amount
+        self.update_user_points(new_points)
+        return new_points
 
     def update_user_points(self, points: int) -> None:
-        pass
+        self.cursor.execute('UPDATE User SET points = ? WHERE id = 1;', (points,))
+        self.conn.commit()
+
+    def reward_points_to_user(self, points: int) -> None:
+        current_points = self.get_user_points()
+        new_points = current_points + points
+        self.update_user_points(new_points)
 
     # save the coupon code
-    def save_coupon_code(self):
-        pass
+    def save_coupon_code(self, coupon_code) -> None:
+        self.cursor.execute(
+            'INSERT INTO CouponCodes (code, description, validTill) VALUES (?, ?, ?);',
+            (coupon_code.code, coupon_code.description, coupon_code.validTill.strftime('%Y-%m-%d'))
+        )
+        self.conn.commit()
 
     def get_all_coupon_codes(self):
-        pass
+        self.cursor.execute('SELECT code, description, validTill FROM CouponCodes;')
+        return self.cursor.fetchall()
 
     def get_weekly_data(self):
         return 'weekly data'
@@ -88,7 +108,7 @@ class DBManager:
     def insert_user(self, daily_limit=2000):
         self.cursor.execute('''
             INSERT INTO User (daily_calories, points, daily_limit)
-            VALUES (0, 0, ?);
+            VALUES (0, 2000, ?);
         ''', (daily_limit,))
         self.conn.commit()
     
@@ -102,6 +122,7 @@ class DBManager:
         self.cursor.execute('DROP TABLE IF EXISTS User;')
         self.cursor.execute('DROP TABLE IF EXISTS RegisteredFood;')
         self.cursor.execute('DROP TABLE IF EXISTS Challenge;')
+        self.cursor.execute('DROP TABLE IF EXISTS CouponCodes;')
         self.cursor.execute('''
             CREATE TABLE IF NOT EXISTS ActivityType (
             id INTEGER PRIMARY KEY,
@@ -137,6 +158,14 @@ class DBManager:
                 calories INT,
                 duration INT,
                 description TEXT
+            );
+        ''')
+        self.cursor.execute('''
+            CREATE TABLE IF NOT EXISTS CouponCodes (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                code TEXT NOT NULL,
+                description TEXT,
+                validTill DATE
             );
         ''')
         self.conn.commit()

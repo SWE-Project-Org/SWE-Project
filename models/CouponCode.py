@@ -8,4 +8,7 @@ class CouponCode:
         timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
         self.code = f"COUPON-{timestamp}-{hash(offer.description)}"[:16]
         self.description = offer.description
-        self.validTill = datetime.datetime.strptime(offer.validTill, "%Y-%m-%d")
+        if isinstance(offer.validTill, str):
+            self.validTill = datetime.datetime.strptime(offer.validTill, "%Y-%m-%d")
+        else:
+            self.validTill = offer.validTill
