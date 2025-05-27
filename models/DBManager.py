@@ -1,5 +1,6 @@
 from models.Challenge import Challenge
 import sqlite3
+import datetime
 
 class DBManager:
     def __init__(self):
@@ -10,10 +11,22 @@ class DBManager:
         self.insert_user()
 
     def is_daily_challenge_completed(self) -> bool:
-        pass
+        # Get today's date in YYYY-MM-DD format
+        today = datetime.datetime.now().strftime("%Y-%m-%d")
+        self.cursor.execute('''
+            SELECT * FROM Challenge 
+            WHERE date_of_challenge = ? AND completed = 1
+        ''', (today,))
+        row = self.cursor.fetchone()
+        return row is not None
 
     def save_challenge(self, challenge: Challenge) -> None:
-        pass
+        self.cursor.execute('''
+            INSERT INTO Challenge 
+            (completed, date_of_challenge, difficulty, calories, duration, description)
+            VALUES (?, ?, ?, ?, ?, ?);
+        ''', challenge.to_tuple())
+        self.conn.commit()
 
     def get_user_points(self) -> int:
         pass
@@ -88,6 +101,7 @@ class DBManager:
         self.cursor.execute('DROP TABLE IF EXISTS Activity;')
         self.cursor.execute('DROP TABLE IF EXISTS User;')
         self.cursor.execute('DROP TABLE IF EXISTS RegisteredFood;')
+        self.cursor.execute('DROP TABLE IF EXISTS Challenge;')
         self.cursor.execute('''
             CREATE TABLE IF NOT EXISTS ActivityType (
             id INTEGER PRIMARY KEY,
@@ -114,7 +128,17 @@ class DBManager:
             id INTEGER PRIMARY KEY AUTOINCREMENT, 
             calories INTEGER
         );''')
-
+        self.cursor.execute('''
+            CREATE TABLE IF NOT EXISTS Challenge (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                completed BOOLEAN NOT NULL,
+                date_of_challenge DATE,
+                difficulty TEXT CHECK( difficulty in ('Easy', 'Medium', 'Hard')),
+                calories INT,
+                duration INT,
+                description TEXT
+            );
+        ''')
         self.conn.commit()
 
     def store_activity(self, 
@@ -157,4 +181,5 @@ class DBManager:
             VALUES (?);
         ''', (calories,))
         self.conn.commit()
+        
         
