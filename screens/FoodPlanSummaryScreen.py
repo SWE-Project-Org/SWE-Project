@@ -11,6 +11,10 @@ class FoodPlanSummaryScreen(QWidget):
         self.ui = food_plan_summary_ui.Ui_Form()
         self.service = service
         self.ui.setupUi(self)
+        # self.ui.label_4 is the breakfast label
+        # self.ui.label_5 is the lunch label
+        # self.ui.label_6 is the dinner label
+        # self.ui.tableWidget is the food plan table find how to insert items
         self.ui.pushButton_9.clicked.connect(self.placeholder) #export to pdf
         self.ui.pushButton_10.clicked.connect(self.show_main_menu_screen) #main menu
 

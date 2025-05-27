@@ -5,7 +5,6 @@ from screens.FoodPlanSummaryScreen import FoodPlanSummaryScreen
 
 
 class GroceryPlannerService:
-
     def __init__(self, db: DBManager, supermarket: Supermarket):
         self.db = db
         self.supermarket = supermarket

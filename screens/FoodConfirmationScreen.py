@@ -11,6 +11,7 @@ class FoodConfirmationScreen(QWidget):
         self.ui = confirm_food_ui.Ui_Form()
         self.service = service
         self.ui.setupUi(self)
+        # self.ui.label_3 is the food name label
         self.ui.pushButton_10.clicked.connect(self.show_notification_screen) #no
         self.ui.pushButton_9.clicked.connect(self.service_get_food_info) #yes
 

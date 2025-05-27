@@ -22,7 +22,7 @@ camera = Camera()
 register_meal_service = RegisterMealService(db, supermarket)
 weekly_progress_service = WeeklyProgressService(db)
 map_service = MapService()
-food_planner_service = FoodPlannerService()
+food_planner_service = FoodPlannerService(db, supermarket)
 activity_monitor_service = ActivityMonitorService(db, smartwatch)
 
 reward_service = RewardService(db,supermarket)

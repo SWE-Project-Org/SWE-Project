@@ -4,12 +4,14 @@ from models.FoodPlan import FoodPlan
 from screens.CreateFoodPlanScreen import CreateFoodPlanScreen
 from screens.GroceryPlannerScreen import CreateGroceryPlannerScreen
 from services.GroceryPlannerService import GroceryPlannerService
+from models.DBManager import DBManager
 
 
 class FoodPlannerService:
 
-    def __init__(self):
-        pass
+    def __init__(self, db: DBManager, supermarket: Supermarket):
+        self.db = db
+        self.supermarket = supermarket
 
     def createFoodPlanService(self):
         self.create_food_plan_screen = CreateFoodPlanScreen(self)

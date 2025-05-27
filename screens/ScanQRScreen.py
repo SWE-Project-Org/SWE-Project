@@ -8,6 +8,9 @@ class ScanQRScreen(QWidget):
         self.ui = scan_qr_ui.Ui_Form()
         self.service = service
         self.ui.setupUi(self)
+        # self.ui.label_4 is the first recently scanned
+        # self.ui.label_5 is the second recently scanned
+        # self.ui.label_6 is the third recently scanned
         self.ui.pushButton_11.clicked.connect(self.show_main_menu_screen) #BACK
         self.ui.pushButton_5.clicked.connect(self.image_upload_service  ) #
 

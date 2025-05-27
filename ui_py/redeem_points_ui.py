@@ -53,14 +53,6 @@ class Ui_Form(object):
 "border-radius: 6px;\n"
 "    padding: 5px;")
         self.pushButton_5.setObjectName("pushButton_5")
-        self.textBrowser = QtWidgets.QTextBrowser(parent=Form)
-        self.textBrowser.setGeometry(QtCore.QRect(260, 180, 131, 61))
-        self.textBrowser.setStyleSheet("color: ffffff;background-color: #00000000;\n"
-"border-radius: 6px;\n"
-"    padding: 5px;")
-        self.textBrowser.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.textBrowser.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-        self.textBrowser.setObjectName("textBrowser")
         self.comboBox_3 = QtWidgets.QComboBox(parent=Form)
         self.comboBox_3.setGeometry(QtCore.QRect(310, 330, 79, 26))
         self.comboBox_3.setStyleSheet("color: f4f4f4;  \n"
@@ -168,6 +160,16 @@ class Ui_Form(object):
         self.comboBox_6.addItem("")
         self.comboBox_6.addItem("")
         self.comboBox_6.addItem("")
+        self.label_12 = QtWidgets.QLabel(parent=Form)
+        self.label_12.setGeometry(QtCore.QRect(270, 180, 131, 61))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.label_12.setFont(font)
+        self.label_12.setStyleSheet("color: ffffff;background-color: #00000000;\n"
+"border-radius: 6px;\n"
+"    padding: 5px;")
+        self.label_12.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.label_12.setObjectName("label_12")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -178,15 +180,6 @@ class Ui_Form(object):
         self.pushButton_11.setText(_translate("Form", "<"))
         self.label.setText(_translate("Form", "REDEEM POINTS"))
         self.pushButton_5.setText(_translate("Form", "My Vouchers"))
-        self.textBrowser.setHtml(_translate("Form", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:\'Noto Sans\'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:13pt;\">My Points:</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:\'FreeSans\'; font-size:13pt;\">2300</span></p></body></html>"))
         self.comboBox_3.setItemText(0, _translate("Form", "0"))
         self.comboBox_3.setItemText(1, _translate("Form", "1"))
         self.comboBox_3.setItemText(2, _translate("Form", "2"))
@@ -224,3 +217,5 @@ class Ui_Form(object):
         self.comboBox_6.setItemText(5, _translate("Form", "5"))
         self.comboBox_6.setItemText(6, _translate("Form", "6"))
         self.comboBox_6.setItemText(7, _translate("Form", "7"))
+        self.label_12.setText(_translate("Form", "My Points:\n"
+"2300"))

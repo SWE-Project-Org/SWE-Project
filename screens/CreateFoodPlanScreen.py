@@ -11,6 +11,8 @@ class CreateFoodPlanScreen(QWidget):
         self.ui = create_food_plan_ui.Ui_Form()
         self.service = service
         self.ui.setupUi(self)
+        # self.ui.comboBox is the goal dropdown
+        # self.ui.lineEdit_2 is the desired weight input
         self.ui.pushButton_6.clicked.connect(self.show_main_menu_screen) #back to main menu
         self.ui.pushButton_5.clicked.connect(self.go_to_grocery_planner) #go to grocery planner
 
