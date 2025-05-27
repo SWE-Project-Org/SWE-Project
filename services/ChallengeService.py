@@ -24,7 +24,7 @@ class ChallengeService:
             calories = challenge.get_calories()
             timer = self.create_timer()
             timer.start_timer()
-            self.dScreen = DailyChallengeScreen(self, challenge)
+            self.dScreen = DailyChallengeScreen(self, challenge, timer)
             self.dScreen.show()
 
         except Exception as e:
