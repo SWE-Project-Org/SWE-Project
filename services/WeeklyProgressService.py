@@ -19,11 +19,12 @@ class WeeklyProgressService:
         self.progress = Progress()
         self.grade_progress()
         self.chart = Chart()
+        self.chart.fig.savefig("ui/weekly_progress.png", dpi=300, bbox_inches='tight')
         self.weekly_progress_screen = WeeklyProgressScreen(self)
         self.weekly_progress_screen.show()
 
     def export(self):
-        pass
+        self.chart.fig.savefig("weekly_progress.pdf", bbox_inches='tight')
 
     def sufficient_data(self):
         pass

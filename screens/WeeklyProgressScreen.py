@@ -18,5 +18,4 @@ class WeeklyProgressScreen(QWidget):
         self.main_menu = main_menu.MainMenuScreen()    
     
     def export_to_pdf_service(self):
-        self.deleteLater()
         self.service.export()
