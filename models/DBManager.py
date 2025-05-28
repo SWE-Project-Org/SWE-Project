@@ -1,4 +1,5 @@
 from models.Challenge import Challenge
+from models.Ingredients import Ingredients
 import sqlite3
 import datetime
 
@@ -89,8 +90,11 @@ class DBManager:
     def fetch_prices(self):
         return 'prices'
     
-    def storeIngredientList(self):
-        pass
+    def storeIngredientList(self, ingredients: Ingredients):
+        for ingredient in ingredients.to_tuple():
+            self.cursor.execute('INSERT INTO Ingredient (name, calories) VALUES (?,?);', ingredient)
+        
+        self.conn.commit()
 
     def insert_activity_type(self,):
         self.cursor.execute('''
@@ -123,6 +127,8 @@ class DBManager:
         self.cursor.execute('DROP TABLE IF EXISTS RegisteredFood;')
         self.cursor.execute('DROP TABLE IF EXISTS Challenge;')
         self.cursor.execute('DROP TABLE IF EXISTS CouponCodes;')
+        self.cursor.execute('DROP TABLE IF EXISTS Ingredient;')
+
         self.cursor.execute('''
             CREATE TABLE IF NOT EXISTS ActivityType (
             id INTEGER PRIMARY KEY,
@@ -166,6 +172,13 @@ class DBManager:
                 code TEXT NOT NULL,
                 description TEXT,
                 validTill DATE
+            );
+            ''')
+        self.cursor.execute('''
+            CREATE TABLE IF NOT EXISTS Ingredient (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                name TEXT NOT NULL,
+                calories INTEGER NOT NULL
             );
         ''')
         self.conn.commit()

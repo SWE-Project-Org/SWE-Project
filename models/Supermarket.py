@@ -10,9 +10,9 @@ class Supermarket:
                 ('Beef Stew', 300), 
                 ('Cheesecake', 321),
                 ('Greek Salad', 150)]
-    
+       
     def fetch_prices(self):
-        return 'prices'
+        return [7.99, 5.49, 3.99, 4.99]
 
     def fetch_offers_from_API(self) -> list[Offer]:
         return [
@@ -43,4 +43,4 @@ class Supermarket:
         ]
     
     def getFoodAvailabilty(self):
-        return 'availability'
+        return True
