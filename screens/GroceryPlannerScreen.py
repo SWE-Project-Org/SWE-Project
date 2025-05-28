@@ -13,8 +13,12 @@ class CreateGroceryPlannerScreen(QWidget):
         self.ui.pushButton_5.clicked.connect(self.find_groceries) #find groceries
     
     def find_groceries(self):
+        try: 
+            budget = float(self.ui.lineEdit_2.text())
+        except ValueError:
+            return
         self.deleteLater()
-        self.service.createGroceryService()
+        self.service.createGroceryService(budget)
 
     def placeholder(self):
         self.deleteLater()

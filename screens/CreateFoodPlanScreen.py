@@ -17,8 +17,14 @@ class CreateFoodPlanScreen(QWidget):
         self.ui.pushButton_5.clicked.connect(self.go_to_grocery_planner) #go to grocery planner
 
     def go_to_grocery_planner(self):
+        selected_goal = self.ui.comboBox.currentText()
+        try: 
+            desired_weight = float(self.ui.lineEdit_2.text())
+        except ValueError:
+            return
         self.deleteLater()
-        self.service.enterGoal()
+        self.service.enterGoal(selected_goal, desired_weight)
+
 
     def show_main_menu_screen(self):
         self.deleteLater()
